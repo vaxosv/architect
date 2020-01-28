@@ -1,0 +1,23 @@
+-var menu = [ { name: 'home', href: 'index.html'}, { name: 'shop all', href: ''}, { name: 'new', href: ''}, { name: 'bags', href: '', submenu: [{ name: 'all bags', href: ''},{ name: 'top handle bags', href: '', product: {img: 'https://www.ysl.com/45/45493328lx_13_a_v4.jpg', title: 'new cool handle bag'}},{ name: 'Cross body', href: '', product: {img: 'https://cdn.yoox.biz/45/45388165cf_13_n_f.jpg', title: 'new cool handle bag2'}}] }, { name: 'jewellery', href: ''}, { name: 'small leather goods', href: ''}, { name: 'all accessories', href: ''}, { name: 'limited edition', href: ''}, { name: 'the edit', href: ''}];
+-var categoryProducts = [{catId: 3, product: {img: 'https://cdn1.static-tgdp.com/ui/productimages/approved/std.lang.all/95/39/689539_sized_1800x1200_rev_2.jpg', title: 'new cool bag'}},{ catId: 3, product: {img: 'https://www.ysl.com/45/45393302EX_12_a_V4.jpg', title: 'new cool bag2'}}];
+.menu
+    .wrapper
+        ul
+            each item, menuIndex in menu
+                li
+                    a(href=item.href)=item.name
+                        -if (item.submenu && item.submenu.length)
+                                .dropdown
+                                    ul
+                                        each subitem in item.submenu
+                                            li
+                                                a(href=subitem.href)=subitem.name
+                                    each randProd in categoryProducts
+                                        -if (randProd.catId === menuIndex)
+                                            .randomProduct
+                                                .forImage
+                                                    img(src=randProd.product.img)
+                                                    h2=randProd.product.title
+
+
+
