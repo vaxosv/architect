@@ -82,7 +82,7 @@ module.exports = {
             filename: "css/main.css"
         }),
         new CopyPlugin([
-            { from: 'assets', to: 'dest' },
+            { from: 'assets', to: 'assets' },
         ]),
     ],
     devServer: {
