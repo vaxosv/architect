@@ -1,25 +1,12 @@
+@mixin tablet {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+
 @mixin phone-sm {
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 768px) {
     @content;
   }
 }
-
-@mixin tablet-lg {
-  @media screen and (max-width: 320px) {
-    @content;
-  }
-}
-
-
-@mixin desktop-lg {
-  @media screen and (max-width: 320px) {
-    @content;
-  }
-}
-
-@mixin full-Hd {
-  @media screen and (max-width: 320px) {
-    @content;
-  }
-}
-

@@ -1,0 +1,61 @@
+@import "../responcive";
+@import "../vatiables";
+
+.header {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  font-size: $bigFint;
+  padding: 20px 50px 0;
+
+  .logo {
+    img {
+      width: 75px;
+      height: 62px;
+    }
+  }
+
+
+  .burgerMenu{
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  .manuItems {
+    display: flex;
+    li {
+      font-family: $fontFemily;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+      margin-right: 29px;
+      color: $maincColor;
+
+      text-transform: capitalize;
+
+      &:last-child {
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          height: 13px;
+          background-color: $maincColor;
+          width: 1px;
+          top: 0;
+          right: -30px;
+          transform: translateY(50%);
+      }
+      }
+    }
+  }
+
+  @include tablet {
+    display: none;
+  }
+}

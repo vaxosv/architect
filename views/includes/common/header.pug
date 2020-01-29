@@ -1,2 +1,16 @@
+-let values = [{name: 'Worck', link: 'ragaca'},{name: 'About Us', link: "ragaca"}, {name: 'News', link: "ragaca"}, {name: 'Contact', link: "ragaca"}]
 header
-    .header this is header
+    .header
+        .logo
+            img(inline src='assets/svg/logo.svg')
+        .filter filtri
+        .burgerMenu dasds
+            .item
+            .item
+            .item
+        ul.manuItems
+                each value in values
+                    li= value.name
+
+
+

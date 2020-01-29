@@ -1,2 +1,11 @@
-@import "./home.scss";
-@import "./responcive";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+@import "reset";
+@import "home.scss";
+@import "common/header.scss";
+@import "responcive";
+@import "vatiables";
+
+html, body {
+  font-size: $defoultFont;
+}
