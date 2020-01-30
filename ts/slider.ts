@@ -13,7 +13,7 @@ export class slider {
     initSlider() {
         this.slider = new Siema({
             selector: '.siema',
-            duration: 200,
+            duration: 1000,
             easing: 'ease-out',
             perPage: 1,
             startIndex: 0,
@@ -33,6 +33,6 @@ export class slider {
             this.slider.next(1, () => {
                 this.sliderStep++
             })
-        }, 1000)
+        }, 4000)
     }
 }

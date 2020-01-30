@@ -47,13 +47,26 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|gif)$/,
                 use: [
-                    'file-loader',
+                    {
+                        loader: "file-loader",
+                        options: {
+                            publicPath: '/',
+                            outputPath: '/',
+                            name: '[path][name].[ext]',
+                        }
+                    }
                 ],
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
-                use: [
-                    'file-loader',
+                use: [{
+                    loader: "file-loader",
+                    options: {
+                        publicPath: '/assets',
+                        outputPath: '/assets/fonts',
+                        name: '[path][name].[ext]',
+                    }
+                }
                 ],
             },
         ]
@@ -94,6 +107,9 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "css/main.css"
         }),
+        new CopyPlugin([
+            { from: 'assets', to: 'assets' },
+        ]),
         new HtmlWebpackInlineSVGPlugin()
     ],
     devServer: {
