@@ -5,7 +5,7 @@ import {slider} from "./slider";
 export class Home {
 
     constructor() {
-        new slider();
+        // new slider();
     }
 }
 

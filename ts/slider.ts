@@ -4,9 +4,11 @@ import Siema from 'siema';
 export class slider {
     private sliderStep: number = 0
     private slider: any;
+    private sliderItemDom: any;
 
     constructor() {
         this.initSlider()
+        this.centerItems()
         this.loop()
     }
 
@@ -22,8 +24,10 @@ export class slider {
             threshold: 20,
             loop: true,
             rtl: false,
-            onInit: () => { },
-            onChange: () => {},
+            onInit: () => {
+            },
+            onChange: () => {
+            },
         });
 
     }
@@ -34,5 +38,12 @@ export class slider {
                 this.sliderStep++
             })
         }, 4000)
+    }
+
+    centerItems() {
+        this.sliderItemDom = document.getElementById('sliderItemCOunt')
+        const forDom = this.sliderItemDom.offsetWidth / 2
+        this.sliderItemDom.style.cssText = `left: calc(50% - ${forDom}px);`
+
     }
 }

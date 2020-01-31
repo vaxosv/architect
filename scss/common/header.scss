@@ -10,59 +10,228 @@
   font-size: $bigFint;
   padding: 20px 50px 0;
   z-index: 2;
+  padding-bottom: 15px;
 
   .logo {
-    img {
-      width: 75px;
-      height: 62px;
+    .logo-darck{
+      display: none;
     }
+
+    .logo-white {
+      display: block;
+      svg {
+        width: 75px;
+        height: 62px;
+      }
+    }
+  }
+
+  .filter {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-family: $fontFemily;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    display: none;
   }
 
 
   .burgerMenu {
     display: none;
+    cursor: pointer;
+
+    svg {
+      path {
+        fill: $maincColor;
+        stroke: $maincColor;
+      }
+    }
 
     @include tablet {
-      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      top: -10px;
     }
   }
 
-  .manuItems {
+  .container {
     display: flex;
+    position: relative;
 
     @include tablet {
       display: none;
     }
 
-    li {
-      font-family: $fontFemily;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 22px;
-      margin-right: 29px;
-      color: $maincColor;
+    .manuItems {
+      display: flex;
+      margin-right: 30px;
 
-      text-transform: capitalize;
 
-      &:last-child {
-        position: relative;
+      a {
+        font-family: $fontFemily;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 22px;
+        margin-right: 29px;
+        color: $maincColor;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
 
-        &:after {
-          content: '';
-          position: absolute;
-          height: 13px;
-          background-color: $maincColor;
-          width: 1px;
-          top: 0;
-          right: -30px;
-          transform: translateY(50%);
+        text-transform: capitalize;
+
+        &:last-child {
+          position: relative;
+
+          &:after {
+            content: '';
+            position: absolute;
+            height: 13px;
+            background-color: $maincColor;
+            width: 1px;
+            top: 7px;
+            right: -30px;
+            transform: translateY(50%);
+          }
         }
+      }
+    }
+
+    .lang {
+      height: 38px;
+      width: 93px;
+      background: rgba(32, 33, 33, 0.4);
+      border-radius: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-family: BPG Nino Mkhedruli;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 100%;
+
+      color: $maincColor;
+    }
+  }
+}
+
+.mobile {
+  display: none;
+}
+
+
+.mobile_active {
+  .header {
+    padding-bottom: 9px;
+    borer: rgba(255, 255, 255, 0.2);
+    border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
+  }
+
+  .mobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #252525;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $maincColor;
+    text-align: center;
+
+    ul {
+      a {
+
+        li {
+          margin-top: 40px;
+          font-family: Open Sans;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 100%;
+
+        }
+      }
+    }
+
+    .language {
+      width: 91px;
+      height: 34px;
+      left: 115px;
+      top: 446px;
+      font-size: 14px;
+      font-weight: 300;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 70px;
+
+      .lang {
+
+      }
+    }
+  }
+}
+
+.header-darck {
+  border-bottom: 1px solid $lightDarck;
+
+  .logo {
+    .logo-darck{
+      display: block;
+      svg {
+        width: 75px;
+        height: 62px;
+      }
+    }
+
+    .logo-white {
+      display: none;
+    }
+  }
+
+  .filter {
+    color: $maincDarckColor;
+    display: block;
+  }
+
+  .burgerMenu {
+    svg {
+      path {
+        fill: $maincDarckColor;
       }
     }
   }
 
-  .lang {
+  .container {
+    .manuItems {
+      a {
+        color: $maincDarckColor;
 
+        &:last-child {
+          &:after {
+            background-color: $maincDarckColor;
+          }
+        }
+      }
+    }
+
+    .lang {
+      color: $langWhiteColor;
+      background-color: $lightWhite;
+    }
   }
 }

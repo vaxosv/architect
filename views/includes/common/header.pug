@@ -1,19 +1,31 @@
--let values = [{name: 'Worck', link: 'ragaca'},{name: 'About Us', link: "ragaca"}, {name: 'News', link: "ragaca"}, {name: 'Contact', link: "ragaca"}]
-header
-    .header
-        .logo
-            img(inline src='assets/svg/logo.svg')
-        .filter filtri
-        .burgerMenu dasds
-            .item
-            .item
-            .item
+-let values = [{name: 'Worck', link: 'projects.html'},{name: 'About Us', link: "./about.html"}, {name: 'News', link: "./news.html"}, {name: 'Contact', link: "contact.html"}]
+header#header
+    //.header-darck add this to darck them
+    .header#headerContainer.header-dark
+        a(href="/")
+            .logo
+                .logo-darck
+                    include ../files/logo-darck
+                .logo-white
+                    include ../files/logo-white
+        .filter filter
         .container
             ul.manuItems
                     each value in values
-                        li= value.name
-            //.lang
-            //    include ./language
+                        a(href=`${value.link}`)
+                            li= value.name
+            .lang
+                .language ქართული
+        .burgerMenu#menu
+            include ../files/burger
+    .mobile
+        ul
+            each value in values
+                a(href=`${value.link}`)
+                    li= value.name
+        .language
+            .lang ქართული
+                a(href="#")
 
 
 
