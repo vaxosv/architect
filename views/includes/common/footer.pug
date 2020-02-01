@@ -1,3 +1,36 @@
+-const icons = [{name: 'facebook', src: 'assets/svg/fb.svg' ,link:'' }, {name: 'instagram', src: 'assets/svg/inst.svg', link: ''}, {name: 'pinteresr', src: 'assets/svg/p.svg', link: ''}]
+-const first = [{name: 'Contact Us', link: '' }, {name: 'Privacy Policy', link: ''}, {name: 'Terms', link: ''}]
+-const company = [{name: 'About Us', link: '' }, {name: 'Our Projects', link: ''}, {name: 'Our Terms', link: ''}]
+-const contat = [{name: 'Tbilisi i.asatiani str #56', link: '' }, {name: '+995 555 11 22 33', link: ''}, {name: 'example@gmail.com', link: ''}]
+
 footer
-    .copy All rights reserved © 2019 Rusi Handmade
-    .payments Payments Accepted
+    .manu
+        .menuListCOntainer
+            .first
+                a(href)
+                    .logo
+                        include ../files/logo-white
+                .list
+                    each item in first
+                        a(href=`${item.link}`)
+                            p= item.name
+            .company COMPANY
+                each item in company
+                    a(href=`${item.link}`)
+                        p= item.name
+            .contact CONTACT
+                each item in contat
+                    a(href=`${item.link}`)
+                        p= item.name
+
+        .social
+            each icon in icons
+                a(href=`${item}`)
+                    //.icon= icon.name
+                    img(src=`${icon.src}`)
+    .copy
+        .copyRight Copyright 2019 CompanyName. All Rights Reserved.
+        .made Made By Mdzgoli
+
+
+

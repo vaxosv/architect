@@ -16,6 +16,9 @@ class App {
             case 'about':
                 console.log('we are in home')
                 break;
+            case 'projects':
+                console.log('we are in home')
+                break;
             default:
                 console.log('mainc')
         }

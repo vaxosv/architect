@@ -1,0 +1,220 @@
+@import "./responcive";
+@import "./vatiables";
+
+
+footer {
+  width: 100%;
+  background-color: #1E1F21;
+  color: white;
+
+  .manu {
+    display: flex;
+    justify-content: center;
+    max-width: 1620px;
+    padding: 50px 100px;
+
+
+    @include phone-sm {
+      margin: 0 15px;
+      flex-direction: column;
+      padding: 0 0 30px;
+    }
+
+    .menuListCOntainer {
+      align-self: self-start;
+      justify-content: space-between;
+      display: flex;
+      width: 100%;
+      max-width: 1080px;
+
+      .first {
+        @include phone-sm {
+          display: none;
+        }
+
+        a {
+          .logo {
+            margin-bottom: 20px;
+          }
+        }
+
+        .list {
+          position: relative;
+          &:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 1px;
+            background-color: #3A3C40;;
+          }
+          a {
+            color: $footerText;
+            &:first-child {
+              p {
+                padding-top: 46px;
+
+                &:before {
+                  content: '';
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+
+                }
+              }
+            }
+            &:last-child{
+              p {
+                margin-bottom: 0;
+              }
+            }
+
+          }
+
+          p {
+            font-family: $fontFemily;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 150%;
+            margin-bottom: 30px;
+
+          }
+        }
+      }
+
+      .company {
+        font-family: $fontFemily;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        text-transform: uppercase;
+        padding-top: 30px;
+
+        color: #FFFFFF;
+
+        @include phone-sm {
+          display: none;
+        }
+
+        a {
+          color: $footerText;
+          &:first-child {
+            p {
+              padding-top: 82px;
+            }
+          }
+
+          &:last-child{
+            p {
+              margin-bottom: 0;
+            }
+          }
+
+          p {
+            font-family: $fontFemily;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 150%;
+            margin-bottom: 20px;
+          }
+        }
+
+
+      }
+
+      .contact {
+        font-family: $fontFemily;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding-top: 30px;
+
+        a {
+          color: $footerText;
+          &:first-child {
+            p {
+              padding-top: 82px;
+
+              @include phone-sm {
+                padding-top: 30px;
+              }
+            }
+          }
+
+          &:last-child{
+            p {
+              margin-bottom: 0;
+            }
+          }
+
+          p {
+            font-family: $fontFemily;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 150%;
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+    }
+
+    .social {
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-end;
+
+      @include tablet-lg {
+        max-width: 170px;
+      }
+
+      @include phone-sm {
+        flex-direction: row;
+        align-items: start;
+        justify-content: start;
+      }
+
+      a {
+        img{
+          margin-top: 30px;
+          @include phone-sm {
+            margin-right: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  .copy {
+    font-family: $fontFemily;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    width: 100%;
+
+    @include phone-sm {
+      padding: 20px 15px;
+      border-top: 1px solid #3A3C40;
+    }
+
+    .copyRight {
+
+    }
+
+    .made {
+      @include phone-sm {
+        display: none;
+      }
+    }
+  }
+}
