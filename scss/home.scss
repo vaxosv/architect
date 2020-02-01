@@ -4,76 +4,43 @@
 .home {
   width: 100%;
   height: 100%;
-  background-image: url('../assets/home.png');
   position: relative;
+
+  .sliderItems {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .descripton {
+    position: absolute;
+    top: 62px;
+    right: 105px;
+    z-index: 2;
+  }
 
   .slideCOntrolers {
     position: absolute;
+    height: 2px;
     color: white;
     bottom: 50px;
     display: flex;
     justify-content: center;
+    z-index: 2;
 
     @include tablet {
       bottom: 25px;
     }
 
-    .control {
+    .smallControl {
       width: 50px;
       height: 1px;
       margin-right: 1px;
-      background-color: rgba(255, 255, 255, 0.5);
+      background-color: rgba(255, 255, 255, 0.5);;
     }
 
     .control-active {
-      background-color: $maincColor;
-    }
-  }
-
-  .siema {
-    div {
-      div {
-        width: 100%;
-
-        .item {
-          width: 100%;
-          height: 100vh;
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center;
-          position: relative;
-
-          .ditales {
-            position: absolute;
-            bottom: 50px;
-            left: 50px;
-            color: $maincColor;
-
-            @include tablet {
-              left: 0;
-              bottom: 75px;
-              text-align: center;
-            }
-
-            .description {
-              font-family: $fontFemily;
-              font-style: normal;
-              font-weight: normal;
-              font-size: 16px;
-              line-height: 100%;
-              margin-bottom: 20px;
-            }
-
-            .name {
-              font-family: $fontFemily;
-              font-style: normal;
-              font-weight: bold;
-              font-size: 26px;
-              line-height: 100%;
-            }
-          }
-        }
-      }
+      background-color: #FFFFFF;
     }
   }
 }

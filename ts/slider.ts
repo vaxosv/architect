@@ -1,49 +1,119 @@
-// @ts-ignore
-import Siema from 'siema';
-
 export class slider {
-    private sliderStep: number = 0
     private slider: any;
-    private sliderItemDom: any;
+    private carucellLength: number;
 
     constructor() {
         this.initSlider()
-        this.centerItems()
-        this.loop()
     }
 
     initSlider() {
-        this.slider = new Siema({
-            selector: '.siema',
-            duration: 1000,
-            easing: 'ease-out',
-            perPage: 1,
-            startIndex: 0,
-            draggable: false,
-            multipleDrag: false,
-            threshold: 20,
+        this.slider = $('.owl-carousel');
+        this.slider.on('initialized.owl.carousel', (e: any) => {
+            this.generateControls(e.item.count)
+            this.controlerButtons();
+        })
+        this.slider.on('changed.owl.carousel', (e: any) => {
+            this.carucellLength = e.item.count;
+            this.sliderDotsContainer(e);
+        })
+        this.slider.owlCarousel({
+            items: 1,
             loop: true,
-            rtl: false,
-            onInit: () => {
-            },
-            onChange: () => {
-            },
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            // center: true,
+            // mouseDrag: true,
+            // touchDrag: true,
+            // pullDrag: true,
+            // freeDrag: true,
+            // margin: true,
+            // stagePadding: true,
+            // merge: true,
+            // mergeFit: true,
+            // autoWidth: true,
+            // autoHeight: true,
+            // nav: true,
+            // navRewind: true,
+            // slideBy: true,
+            // dotsEach: true,
+            // smartSpeed: true,
+            // fluidSpeed: true,
+            // autoplaySpeed: true,
+            // navSpeed: true,
+            // dotsSpeed: true,
+            // dragEndSpeed: true,
+            // responsiveRefreshRate: true,
+            // animateOut: true,
+            // animateIn: true,
+            // fallbackEasing: true,
+            // callbacks: true,
+            // info: true,
         });
-
     }
 
-    loop() {
-        setInterval(() => {
-            this.slider.next(1, () => {
-                this.sliderStep++
+    generateControls(itemLength: number) {
+        for (let i = 0; i < itemLength; i++) {
+            const div = $('<div/>', {
+                "class": 'smallControl',
             })
-        }, 4000)
+            $('.slideCOntrolers').append(div)
+        }
     }
 
-    centerItems() {
-        this.sliderItemDom = document.getElementById('sliderItemCOunt')
-        const forDom = this.sliderItemDom.offsetWidth / 2
-        this.sliderItemDom.style.cssText = `left: calc(50% - ${forDom}px);`
+    controlerButtons() {
+        const slider = $('.slideCOntrolers')
+        const sliderwidth = slider.width() / 2;
+        slider.css('left', 'calc(50% - ' + sliderwidth + 'px');
+    }
 
+    sliderDotsContainer(e: any) {
+        const index = this.getIndex(e);
+        this.sliderDots(index)
+        this.serdescriptions(e);
+    }
+
+    getIndex(e: any) {
+        if (e.item) {
+            let index = e.item.index - 1;
+            const count = e.item.count;
+            if (index > count) {
+                index -= count;
+            }
+            if (index <= 0) {
+                index += count;
+            }
+            return index;
+        }
+    }
+
+    sliderDots(active: number) {
+        active =  active - 1;
+        const slides = document.getElementsByClassName('smallControl')
+        if(!slides[0]) return
+
+        for (let i = 0; i<= slides.length - 1; i++) {
+            if (i === active) {
+                slides[i].classList.add('control-active')
+            } else {
+                // @ts-ignore
+                slides[i].classList.remove('control-active')
+            }
+        }
+    }
+
+    serdescriptions(e: any) {
+        new Array(e.target.children[0].children[0].children).forEach(i => {
+            for (let item of i) {
+                const active = item.classList.value.includes('active')
+                if (active) {
+                    const text  = item.nextElementSibling.children[0].textContent.trim();
+                    $('.descripton').html(text);
+                }
+            }
+        })
+
+        const itemText = $('.active > ').text().trim()
+        // console.log(itemText)
     }
 }

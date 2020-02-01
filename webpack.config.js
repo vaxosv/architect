@@ -3,6 +3,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const path = require('path');
 const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin')
+const webpack = require('webpack')
+
 module.exports = {
     entry: "./ts/index.ts",
     output: {
@@ -43,6 +45,27 @@ module.exports = {
                     },
                     "sass-loader"
                 ]
+            },
+            {
+                test: /\.css$/i,
+                use: ['style-loader', 'css-loader'],
+            },
+            {
+                test: /\.js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
+            },
+            {
+                test: /\.html$/i,
+                loader: 'html-loader',
+                options: {
+                    attributes: true,
+                },
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,
@@ -103,6 +126,11 @@ module.exports = {
             title: "contact page",
             filename: "contact.html",
             template: 'views/contact.pug'
+        }),
+        new webpack.ProvidePlugin({
+            '$': "jquery",
+            'jQuery': "jquery",
+            'window.jQuery': 'jquery',
         }),
         new MiniCssExtractPlugin({
             filename: "css/main.css"

@@ -1,6 +1,7 @@
 import {Home} from "./home";
-import * as $ from 'jquery';
 import {Header} from "./header";
+
+import 'owl.carousel';
 
 const css = require('../scss/main.scss');
 
@@ -22,12 +23,9 @@ class App {
     }
 }
 
-
-
 window.onload = () => {
     new App()
     new Header()
-
 }
 
 
