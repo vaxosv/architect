@@ -1,0 +1,55 @@
+@import "./responcive";
+@import "./vatiables";
+
+.contactUs {
+  width: 100%;
+  height: 100vh;
+  background-color: #202121;
+  color: $maincColor;
+  font-family: $fontFemily;
+  display: flex;
+  justify-content: center;
+
+  .container{
+    max-width: 1109px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+
+    .info {
+      width: 50%;
+      padding-top: 20px;
+
+      .name{
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 30px;
+      }
+      .contant{
+        margin-bottom: 70px;
+      }
+
+      .social {
+        margin-top: 175px;
+        .address{
+          margin-bottom: 30px;
+        }
+        a {
+          margin-right: 50px;
+          img {
+
+          }
+        }
+      }
+    }
+
+    .map {
+      //width: 50%;
+      width: 635px;
+      height: 610px;
+      background-color: gray;
+    }
+  }
+}
+
+
