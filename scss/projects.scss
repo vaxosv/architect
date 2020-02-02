@@ -174,7 +174,7 @@ footer {
       align-items: flex-end;
       justify-content: flex-end;
 
-      @include tablet-lg {
+      @include tablet {
         max-width: 170px;
       }
 

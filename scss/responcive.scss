@@ -4,7 +4,7 @@
   }
 }
 
-@mixin tablet-lg {
+@mixin tablet {
   @media screen and (max-width: 1400px) {
     @content;
   }
