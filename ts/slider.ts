@@ -1,49 +1,81 @@
-// @ts-ignore
-import Siema from 'siema';
+import {tns} from "../assets/js/tini";
 
 export class slider {
-    private sliderStep: number = 0
-    private slider: any;
     private sliderItemDom: any;
 
     constructor() {
         this.initSlider()
-        this.centerItems()
-        this.loop()
+        this.alignItemsCenter()
+        // this.loop()
     }
 
     initSlider() {
-        this.slider = new Siema({
-            selector: '.siema',
-            duration: 1000,
-            easing: 'ease-out',
-            perPage: 1,
-            startIndex: 0,
-            draggable: false,
-            multipleDrag: false,
-            threshold: 20,
-            loop: true,
-            rtl: false,
-            onInit: () => {
-            },
-            onChange: () => {
-            },
+        let slider = tns({
+            container: '.my-slider',
+            items: 1,
+            slideBy: 'page',
+            autoplay: true,
+            speed: 500,
+            autoplayTimeout: 1500,
+            controls: false,
+            autoplayText: ['', ''],
+            touch: true
+        })
+
+        this.createButtons(slider.getInfo())
+        this.getActiveButton(slider.getInfo())
+        this.customizedFunction(slider.getInfo(), name)
+        console.log(slider.getInfo().slideItems)
+        debugger
+        slider.events.on('transitionStart', (e: any, name: any) => {
+            this.customizedFunction(e, name)
+            this.getActiveButton(e)
+
         });
-
     }
 
-    loop() {
-        setInterval(() => {
-            this.slider.next(1, () => {
-                this.sliderStep++
+    createButtons(slider: any) {
+        const slides = slider.slideCount
+        for (let i = 0; i <= slides; i++) {
+            const div = $('<div/>', {
+                "class": 'smallControl',
             })
-        }, 4000)
+            $('.slideCOntrolers').append(div)
+        }
     }
 
-    centerItems() {
+    customizedFunction(info: any, eventName: any) {
+        const indexPrev = info.indexCached
+        const indexCurrent = info.index;
+        const header = info.slideItems[indexCurrent].children[0].textContent
+        const description = info.slideItems[indexCurrent].children[1].textContent
+
+        this.drawSlietext(header, description);
+    }
+
+    getActiveButton(info: any) {
+        const index = info.displayIndex;
+        const slides = document.getElementsByClassName('smallControl')
+
+
+        for (let i = 0; i <= slides.length - 1; i++) {
+            if (i === index) {
+                slides[i].classList.add('control-active')
+            } else {
+                slides[i].classList.remove('control-active')
+            }
+        }
+    }
+
+    alignItemsCenter() {
         this.sliderItemDom = document.getElementById('sliderItemCOunt')
         const forDom = this.sliderItemDom.offsetWidth / 2
         this.sliderItemDom.style.cssText = `left: calc(50% - ${forDom}px);`
-
     }
+
+    drawSlietext(header: string, description: string) {
+        $('.textHeader').text(header)
+        $('.textOharagraph').text(description)
+    }
+
 }

@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const path = require('path');
 const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin')
+const webpack = require('webpack')
 module.exports = {
     entry: "./ts/index.ts",
     output: {
@@ -98,6 +99,16 @@ module.exports = {
             title: "news page",
             filename: "news.html",
             template: 'views/news.pug'
+        }),
+        new webpack.ProvidePlugin({
+            '$': "jquery",
+            'jQuery': "jquery",
+            'window.jQuery': 'jquery',
+        }),
+        new HtmlWebpackPlugin({
+            title: "project item",
+            filename: "project-item.html",
+            template: 'views/project-item.pug'
         }),
         new HtmlWebpackPlugin({
             title: "contact page",

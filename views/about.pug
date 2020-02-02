@@ -1,5 +1,8 @@
-extends ./includes/mainLayout
+extends includes/mainLayout
 block content;
-    include ./includes/about/about.pug
+    include includes/common/header
+    include includes/about/about
+    include includes/common/staf
+    include includes/common/footer
     script.
         var page = 'about'
