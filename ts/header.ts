@@ -7,7 +7,6 @@ export class Header {
         document.getElementById('menu').addEventListener('click', () => {
             document.getElementById('header').classList.toggle('mobile_active')
             document.getElementById('headerContainer').classList.toggle('header-dark')
-
         })
     };
 }
