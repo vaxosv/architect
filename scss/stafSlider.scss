@@ -1,0 +1,38 @@
+@import "./responcive";
+@import "./vatiables";
+
+.staf {
+  display: flex;
+  justify-content: center;
+  .slidercontainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-right: 10px;
+    .container {
+
+      .image{
+        img {
+          max-width: 350px;
+          width: 100%;
+          height: auto;
+          padding-left: 10px;
+        }
+      }
+      .name{
+      }
+      .possition{
+      }
+    }
+
+  }
+
+  .controls{
+    .prev{
+
+    }
+    .next{
+
+    }
+  }
+}

@@ -1,9 +1,9 @@
 import {Home} from "./home";
 import * as $ from 'jquery';
 import {Header} from "./header";
+import {about} from "./about";
 
 const css = require('../scss/main.scss');
-
 
 class App {
     constructor(){
@@ -12,8 +12,11 @@ class App {
         switch (page) {
             case 'home':
                 new Home()
+                new Header()
                 break;
             case 'about':
+                new Header()
+                new about()
                 console.log('we are in home')
                 break;
             case 'projects':
@@ -29,8 +32,6 @@ class App {
 
 window.onload = () => {
     new App()
-    new Header()
-
 }
 
 
