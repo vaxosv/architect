@@ -1,6 +1,28 @@
 @import "./responcive";
 @import "./vatiables";
 
+.stafHeader{
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+
+  h2 {
+    max-width: 1110px;
+    width: 100%;
+    font-family: $fontFemily;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 130%;
+    /* identical to box height, or 78px */
+
+    text-transform: capitalize;
+    font-feature-settings: 'liga' off;
+
+    color: #202121;
+  }
+}
+
 .staf {
   display: flex;
   justify-content: center;
@@ -15,6 +37,7 @@
     display: flex;
     justify-content: center;
     margin-right: 2px;
+    margin-top: 60px;
 
 
     .sliderContainer {
@@ -36,12 +59,29 @@
         max-width: 350px;
         width: 100%;
         margin: 0 auto;
+        font-family: $fontFemily;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 21px;
+        line-height: 160%;
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
+        color: #202121;
       }
 
       .possition {
         max-width: 350px;
         width: 100%;
         margin: 0 auto;
+        font-family: $fontFemily;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 160%;
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
+        color: rgba(32, 33, 33, 0.75);
+
       }
     }
   }
@@ -72,13 +112,6 @@
   }
 }
 
-.tns-item {
-  width: 100%;
-  margin: 2px !important;
-  padding-right: 2px;
-}
-
-
 .darck {
   svg {
     path {
@@ -105,6 +138,11 @@
 }
 
 .forMobile {
+  display: none;
+
+  @include phone-sm {
+    display: block;
+  }
   .stafSlider {
     display: flex;
     flex-wrap: wrap;

@@ -13,6 +13,7 @@ footer {
     justify-content: center;
     max-width: 1620px;
     padding: 50px 100px;
+    margin: 0 auto;
 
 
     @include phone-sm {
@@ -41,7 +42,8 @@ footer {
 
         .list {
           position: relative;
-          &:before{
+
+          &:before {
             content: '';
             position: absolute;
             top: 0;
@@ -50,8 +52,10 @@ footer {
             height: 1px;
             background-color: #3A3C40;;
           }
+
           a {
             color: $footerText;
+
             &:first-child {
               p {
                 padding-top: 46px;
@@ -65,7 +69,8 @@ footer {
                 }
               }
             }
-            &:last-child{
+
+            &:last-child {
               p {
                 margin-bottom: 0;
               }
@@ -101,13 +106,14 @@ footer {
 
         a {
           color: $footerText;
+
           &:first-child {
             p {
               padding-top: 82px;
             }
           }
 
-          &:last-child{
+          &:last-child {
             p {
               margin-bottom: 0;
             }
@@ -137,6 +143,7 @@ footer {
 
         a {
           color: $footerText;
+
           &:first-child {
             p {
               padding-top: 82px;
@@ -147,7 +154,7 @@ footer {
             }
           }
 
-          &:last-child{
+          &:last-child {
             p {
               margin-bottom: 0;
             }
@@ -185,7 +192,7 @@ footer {
       }
 
       a {
-        img{
+        img {
           margin-top: 30px;
           @include phone-sm {
             margin-right: 30px;
@@ -196,25 +203,30 @@ footer {
   }
 
   .copy {
-    font-family: $fontFemily;
-    padding: 20px 50px;
     display: flex;
-    justify-content: space-between;
-    color: white;
-    width: 100%;
+    justify-content: center;
+    .comtiner {
+      font-family: $fontFemily;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      color: white;
+      max-width: 1750px;
+      width: 100%;
 
-    @include phone-sm {
-      padding: 20px 15px;
-      border-top: 1px solid #3A3C40;
-    }
-
-    .copyRight {
-
-    }
-
-    .made {
       @include phone-sm {
-        display: none;
+        padding: 20px 15px;
+        border-top: 1px solid #3A3C40;
+      }
+
+      .copyRight {
+
+      }
+
+      .made {
+        @include phone-sm {
+          display: none;
+        }
       }
     }
   }
