@@ -4,35 +4,104 @@
 .staf {
   display: flex;
   justify-content: center;
+
+  @include phone-sm {
+    display: none;
+  }
+
   .slidercontainer {
+    max-width: 1120px;
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-right: 10px;
-    .container {
+    margin-right: 2px;
 
-      .image{
+
+
+    .sliderContainer {
+      margin: 0 auto;
+
+      .image {
+        max-width: 350px;
+        width: 100%;
+        margin: 0 auto;
+
         img {
           max-width: 350px;
           width: 100%;
           height: auto;
-          padding-left: 10px;
         }
       }
-      .name{
+
+      .name {
+        max-width: 350px;
+        width: 100%;
+        margin: 0 auto;
       }
-      .possition{
+
+      .possition {
+        max-width: 350px;
+        width: 100%;
+        margin: 0 auto;
       }
-    }
-
-  }
-
-  .controls{
-    .prev{
-
-    }
-    .next{
-
     }
   }
 }
+
+.controls {
+  margin: 73px 0 103px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  @include phone-sm {
+    display: none;
+  }
+
+  .arrows {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+
+    .prev {
+      cursor: pointer;
+    }
+
+    .next {
+      cursor: pointer;
+    }
+  }
+}
+
+.tns-item {
+  width: 100%;
+  margin: 2px!important;
+  padding-right: 2px;
+}
+
+
+.darck {
+  svg{
+    path {
+      fill: #202121;
+    }
+
+    rect {
+      fill: #202121;
+    }
+  }
+}
+
+.gray {
+  svg {
+    path {
+      fill: #C3C3D2;
+    }
+
+    rect {
+      fill: #C3C3D2;
+    }
+
+  }
+}
+
