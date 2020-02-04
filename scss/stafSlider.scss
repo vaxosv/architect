@@ -17,7 +17,6 @@
     margin-right: 2px;
 
 
-
     .sliderContainer {
       margin: 0 auto;
 
@@ -75,13 +74,13 @@
 
 .tns-item {
   width: 100%;
-  margin: 2px!important;
+  margin: 2px !important;
   padding-right: 2px;
 }
 
 
 .darck {
-  svg{
+  svg {
     path {
       fill: #202121;
     }
@@ -105,3 +104,25 @@
   }
 }
 
+.forMobile {
+  .stafSlider {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 20px;
+
+    .sliderContainer {
+      .image {
+        img {
+          max-width: 130px;
+        }
+
+      }
+
+      .possition {
+        margin-bottom: 10px;
+
+      }
+    }
+  }
+}
