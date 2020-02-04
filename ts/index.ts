@@ -2,6 +2,7 @@ import {Home} from "./home";
 import * as $ from 'jquery';
 import {Header} from "./header";
 import {about} from "./about";
+import {News} from "./news";
 
 const css = require('../scss/main.scss');
 
@@ -21,6 +22,9 @@ class App {
                 break;
             case 'projects':
                 console.log('we are in home')
+                break;
+            case 'news':
+                new News()
                 break;
             default:
                 console.log('mainc')
