@@ -1,37 +1,33 @@
 import {Home} from "./home";
-import * as $ from 'jquery';
 import {Header} from "./header";
 import {about} from "./about";
 import {News} from "./news";
+import {MenuColors} from "./main.enums";
 
 const css = require('../scss/main.scss');
 
 class App {
-    constructor(){
+    constructor() {
         console.info('init')
         // @ts-ignore
         switch (page) {
             case 'home':
                 new Home()
-                new Header()
+                new Header({menuColors: MenuColors.white, shwFiltr: false})
                 break;
             case 'about':
-                new Header()
                 new about()
-                console.log('we are in home')
+                new Header({menuColors: MenuColors.darck, shwFiltr: false})
                 break;
             case 'projects':
-                console.log('we are in home')
                 break;
             case 'news':
                 new News()
                 break;
             default:
-                console.log('mainc')
         }
     }
 }
-
 
 
 window.onload = () => {

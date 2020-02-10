@@ -13,16 +13,21 @@
   padding-bottom: 15px;
 
   .logo {
-    .logo-darck{
-      display: none;
+
+    .logoContainer {
+      width: 84px;
+      height: 71px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .logo-darck {
+      background-image: url("../assets/logo/logo-darck.svg");
     }
 
     .logo-white {
-      display: block;
-      svg {
-        width: 75px;
-        height: 62px;
-      }
+      background-image: url("../assets/logo/logo.white.svg");
     }
   }
 
@@ -135,7 +140,7 @@
   }
 
   .mobile {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
@@ -189,17 +194,25 @@
 .header-darck {
   border-bottom: 1px solid $lightDarck;
 
-  .logo {
-    .logo-darck{
-      display: block;
-      svg {
-        width: 75px;
-        height: 62px;
+  .container {
+
+    .manuItems {
+      a {
+        color: $maincDarckColor;
+
+        &:last-child {
+          position: relative;
+
+          &:after {
+            background-color: $maincDarckColor;
+          }
+        }
+
       }
     }
 
-    .logo-white {
-      display: none;
+    .lang {
+      color: $maincDarckColor;
     }
   }
 
@@ -216,22 +229,4 @@
     }
   }
 
-  .container {
-    .manuItems {
-      a {
-        color: $maincDarckColor;
-
-        &:last-child {
-          &:after {
-            background-color: $maincDarckColor;
-          }
-        }
-      }
-    }
-
-    .lang {
-      color: $langWhiteColor;
-      background-color: $lightWhite;
-    }
-  }
 }

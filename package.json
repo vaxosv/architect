@@ -27,7 +27,13 @@
     "typescript": "^3.6.3",
     "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9",
-    "webpack-dev-server": "^3.8.1"
+    "webpack-dev-server": "^3.8.1",
+    "css-loader": "^3.2.0",
+    "html-beautify-webpack-plugin": "^1.0.5",
+    "mini-css-extract-plugin": "^0.8.0",
+    "postcss-loader": "^3.0.0",
+    "resolve-url-loader": "^3.1.1",
+    "sass-loader": "^8.0.0"
   },
   "devDependencies": {
     "@types/jquery": "^3.3.31",
@@ -41,7 +47,11 @@
     "resolve-url-loader": "^3.1.1",
     "sass-loader": "^8.0.2",
     "svg-inline-loader": "^0.8.0",
-    "url-loader": "^3.0.0"
+    "svg-url-loader": "^4.0.0",
+    "url-loader": "^3.0.0",
+    "html-loader": "^0.5.5",
+    "postcss-combine-media-query": "^1.0.0",
+    "postcss-sort-media-queries": "^1.1.20"
   },
   "author": "",
   "license": "ISC"

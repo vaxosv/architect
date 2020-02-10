@@ -42,6 +42,7 @@ module.exports = {
                             ]
                         }
                     },
+                    "resolve-url-loader",
                     "sass-loader"
                 ]
             },

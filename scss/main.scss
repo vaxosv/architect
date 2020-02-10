@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
+
+
 @import "reset";
 @import "home.scss";
 @import "common/header";
@@ -17,3 +19,17 @@
 html, body {
   font-size: $defoultFont;
 }
+
+
+.fix{
+  overflow: hidden;
+}
+
+.hide {
+  display: none !important;
+}
+
+.bgc {
+
+}
+

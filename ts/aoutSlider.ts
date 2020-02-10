@@ -51,7 +51,6 @@ export class aboutSlider {
             buttonLeft.removeClass('gray')
             buttonLeft.addClass('darck')
         }
-        console.log(info)
         if (info.displayIndex === info.pages) {
             buttonRight.removeClass('darck')
             buttonRight.addClass('gray')

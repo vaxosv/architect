@@ -25,7 +25,6 @@ export class slider {
         this.createButtons(slider.getInfo())
         this.getActiveButton(slider.getInfo())
         this.customizedFunction(slider.getInfo(), name)
-        console.log(slider.getInfo().slideItems)
         slider.events.on('transitionStart', (e: any, name: any) => {
             this.customizedFunction(e, name)
             this.getActiveButton(e)

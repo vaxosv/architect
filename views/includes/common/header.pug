@@ -1,13 +1,10 @@
 -let values = [{name: 'Worck', link: 'projects.html'},{name: 'About Us', link: "./about.html"}, {name: 'News', link: "./news.html"}, {name: 'Contact', link: "contact.html"}]
 header#header
     //.header-darck add this to darck them
-    .header#headerContainer.header-dark
+    #headerContainer
         a(href="/")
             .logo
-                .logo-darck
-                    include ../files/logo-darck
-                .logo-white
-                    include ../files/logo-white
+                .logoContainer
         .filter filter
         .container
             ul.manuItems
