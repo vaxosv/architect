@@ -19,7 +19,8 @@ export class slider {
             autoplayTimeout: 1500,
             controls: false,
             autoplayText: ['', ''],
-            touch: true
+            touch: true,
+            // mouseDrag: true,
         })
 
         this.createButtons(slider.getInfo())
@@ -47,6 +48,8 @@ export class slider {
         const indexCurrent = info.index;
         const header = info.slideItems[indexCurrent].children[0].textContent
         const description = info.slideItems[indexCurrent].children[1].textContent
+
+        this.animation(info)
 
         this.drawSlietext(header, description);
     }
@@ -76,4 +79,19 @@ export class slider {
         $('.textOharagraph').text(description)
     }
 
+    animation(info: any) {
+        const div = $('#description')
+        div.animate({
+            left: "-=250",
+            opacity: 0
+        }, () => {
+            div.animate({
+                opacity: 1
+            })
+            div.css({
+                left: "150px",
+            })
+        })
+
+    }
 }
