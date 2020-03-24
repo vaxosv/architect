@@ -29,6 +29,10 @@
     .logo-white {
       background-image: url("../assets/logo/logo.white.svg");
     }
+
+    .menu-open {
+      background-image: url("../assets/logo/logo-menu.svg");
+    }
   }
 
   .filter {
@@ -47,11 +51,25 @@
     display: none;
     cursor: pointer;
 
-    svg {
-      path {
-        fill: $maincColor;
-        stroke: $maincColor;
-      }
+    .burger {
+      width: 20px;
+      height: 17px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .closeActive {
+      background-image: url("../assets/logo/close.svg");
+    }
+
+    .burgerActive{}
+    .burgerActive-white {
+      background-image: url("../assets/logo/menu-white.svg");
+    }
+
+    .burgerActive-darck {
+      background-image: url("../assets/logo/menu-darck.svg");
     }
 
     @include tablet {
@@ -59,7 +77,7 @@
       justify-content: center;
       align-items: center;
       position: relative;
-      top: -10px;
+      top: 0;
     }
   }
 

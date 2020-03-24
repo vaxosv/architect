@@ -4,7 +4,13 @@ export enum MenuColors {
 }
 
 
+export enum Logo {
+    white,
+    darck
+}
+
 export interface MenuConfig {
     menuColors: MenuColors;
+    logo: Logo;
     shwFiltr: boolean;
 }

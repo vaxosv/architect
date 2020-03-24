@@ -1,8 +1,10 @@
-export function ellipsizeTextBox(el: any) {
-    const maxStrLength = 400;
-    el.innerHTML = el.innerHTML.length > maxStrLength ?
-        `${el.innerHTML.substring(0, maxStrLength)}... <span class="readMore">Reade More</span>`
-        : el.innerHTML;
+export function ellipsizeTextBox(el: any, text: string, length: number, fullText: boolean) {
+    const maxStrLength = length;
+    let innerText = ''
+    innerText = text.length > maxStrLength ?
+        `${text.substring(0, maxStrLength)}... <span class="readMore">Reade More</span>`
+        : text;
+    el.html(innerText)
 }
 
 
