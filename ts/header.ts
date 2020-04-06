@@ -3,6 +3,7 @@ import {toggleBodyFIx} from "./helpers/helper";
 
 export class Header {
     constructor(private menuConfig: MenuConfig) {
+        this.filter()
         this.eventLIstners()
         this.setMenuColor(menuConfig.menuColors);
         this.corretLogo()
@@ -71,5 +72,13 @@ export class Header {
         } else {
             $('.burger ').addClass('burgerActive-white')
         }
+    }
+
+    filter() {
+        if (this.menuConfig.shwFiltr) {
+            return
+        }
+
+        $('.filter').hide()
     }
 }

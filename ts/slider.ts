@@ -49,8 +49,6 @@ export class slider {
         const header = info.slideItems[indexCurrent].children[0].textContent
         const description = info.slideItems[indexCurrent].children[1].textContent
 
-        this.animation(info)
-
         this.drawSlietext(header, description);
     }
 

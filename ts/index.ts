@@ -12,17 +12,19 @@ class App {
         // @ts-ignore
         switch (page) {
             case 'home':
-                new Home()
-                new Header({menuColors: MenuColors.white, logo: Logo.white, shwFiltr: false})
+                new Home();
+                new Header({menuColors: MenuColors.white, logo: Logo.white, shwFiltr: false});
                 break;
             case 'about':
-                new about()
-                new Header({menuColors: MenuColors.darck, logo: Logo.darck, shwFiltr: false})
+                new about();
+                new Header({menuColors: MenuColors.darck, logo: Logo.darck, shwFiltr: false});
                 break;
             case 'projects':
+                new Header({menuColors: MenuColors.darck, logo: Logo.darck, shwFiltr: true});
                 break;
             case 'news':
-                new News()
+                new News();
+                new Header({menuColors: MenuColors.darck, logo: Logo.darck, shwFiltr: false});
                 break;
             default:
         }
