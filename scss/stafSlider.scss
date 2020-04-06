@@ -1,7 +1,7 @@
 @import "./responcive";
 @import "./vatiables";
 
-.stafHeader{
+.stafHeader {
   display: flex;
   justify-content: center;
   margin-top: 100px;
@@ -14,153 +14,30 @@
     font-weight: bold;
     font-size: 60px;
     line-height: 130%;
-    /* identical to box height, or 78px */
-
     text-transform: capitalize;
     font-feature-settings: 'liga' off;
-
     color: #202121;
   }
 }
 
-.staf {
+.staffSlider {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1110px;
+  margin: 0 auto;
 
-  @include phone-sm {
-    display: none;
-  }
-
-  .slidercontainer {
-    max-width: 1120px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-right: 2px;
-    margin-top: 60px;
-
-
-    .sliderContainer {
-      margin: 0 auto;
-
-      .image {
-        max-width: 350px;
-        width: 100%;
-        margin: 0 auto;
-
-        img {
-          max-width: 350px;
-          width: 100%;
-          height: auto;
-        }
+  .sliderContainer {
+    .image {
+      img {
+        max-width: 130px;
       }
 
-      .name {
-        max-width: 350px;
-        width: 100%;
-        margin: 0 auto;
-        font-family: $fontFemily;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 21px;
-        line-height: 160%;
-        letter-spacing: 0.02em;
-        text-transform: capitalize;
-        color: #202121;
-      }
-
-      .possition {
-        max-width: 350px;
-        width: 100%;
-        margin: 0 auto;
-        font-family: $fontFemily;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 160%;
-        letter-spacing: 0.02em;
-        text-transform: capitalize;
-        color: rgba(32, 33, 33, 0.75);
-
-      }
-    }
-  }
-}
-
-.controls {
-  margin: 73px 0 103px;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-
-  @include phone-sm {
-    display: none;
-  }
-
-  .arrows {
-    display: flex;
-    justify-content: space-between;
-    width: 100px;
-
-    .prev {
-      cursor: pointer;
     }
 
-    .next {
-      cursor: pointer;
-    }
-  }
-}
+    .possition {
+      margin-bottom: 10px;
 
-.darck {
-  svg {
-    path {
-      fill: #202121;
-    }
-
-    rect {
-      fill: #202121;
-    }
-  }
-}
-
-.gray {
-  svg {
-    path {
-      fill: #C3C3D2;
-    }
-
-    rect {
-      fill: #C3C3D2;
-    }
-
-  }
-}
-
-.forMobile {
-  display: none;
-
-  @include phone-sm {
-    display: block;
-  }
-  .stafSlider {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px 20px;
-
-    .sliderContainer {
-      .image {
-        img {
-          max-width: 130px;
-        }
-
-      }
-
-      .possition {
-        margin-bottom: 10px;
-
-      }
     }
   }
 }
