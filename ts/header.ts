@@ -55,6 +55,9 @@ export class Header {
     }
 
     setMenuColor(menuClors: MenuColors) {
+        if (this.menuConfig.menuColors === MenuColors.darck) {
+            $('#headerContainer').addClass('white')
+        }
         $('#headerContainer').addClass(menuClors);
     }
 
