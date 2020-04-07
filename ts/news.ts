@@ -22,16 +22,16 @@ export class News {
             element.html(elementText)
 
 
-            element.parent().parent().parent().parent().siblings().each((i, el) => {
-                const element =
-                    $(el).children('a')
-                    .children('.postContainer')
-                    .children('.description')
-                    .children('.newsDescription')
-
-                const elementText = element.data('text');
-                ellipsizeTextBox(element, elementText, 230, false);
-            });
+            // element.parent().parent().parent().parent().siblings().each((i, el) => {
+            //     const element =
+            //         $(el).children('a')
+            //         .children('.postContainer')
+            //         .children('.description')
+            //         .children('.newsDescription')
+            //
+            //     const elementText = element.data('text');
+            //     ellipsizeTextBox(element, elementText, 230, false);
+            // });
 
         })
     }

@@ -9,6 +9,7 @@
   font-family: $fontFemily;
   display: flex;
   justify-content: center;
+  padding-top: 100px;
 
   @include phone-sm {
     height: auto;
