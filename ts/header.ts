@@ -21,6 +21,7 @@ export class Header {
     };
 
     activteMenu() {
+        $('#headerContainer').removeClass('white')
         $('#header').addClass('mobile_active')
         $('.filter').addClass('hide')
         $('.logoContainer').addClass('menu-open')
@@ -38,6 +39,7 @@ export class Header {
     }
 
     deactivvateManu() {
+        $('#headerContainer').addClass('white')
         $('#header').removeClass('mobile_active')
         $('.filter').removeClass('hide')
         $('.logoContainer').removeClass('menu-open')
