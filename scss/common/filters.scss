@@ -2,8 +2,16 @@
   position: fixed;
   width: 100%;
   margin-top: 107px;
-  z-index: 1;
+  z-index: 4;
   background-color: #fff;
+
+  .full {
+    width: 100vw;
+    height: calc(100vh - 140px);
+    background: rgba(32, 33, 33, 0.8);
+    //opacity: 0.1;
+  }
+
 
   .filters {
     margin: 30px auto 30px;
@@ -19,15 +27,17 @@
 
       &:hover .list-container {
         display: block;
+        background-color: #fff;
       }
 
       .list-container {
         display: none;
         position: absolute;
         left: 0;
-        //top: 30;
+        //background-color: #fff;
 
         .list {
+          padding-top: 40px;
           width: 100vw;
           background-color: #fff;
 
@@ -40,6 +50,7 @@
             .some {
               text-align: center;
               width: 33%;
+              margin-bottom: 40px;
             }
           }
         }
