@@ -15,11 +15,11 @@
 @import "project-detaild";
 @import "assets/css/tini";
 @import "scss/stafSlider";
+@import "common/filters";
 
 html, body {
   font-size: $defoultFont;
 }
-
 
 .fix{
   overflow: hidden;

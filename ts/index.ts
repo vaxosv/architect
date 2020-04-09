@@ -3,6 +3,7 @@ import {Header} from "./header";
 import {about} from "./about";
 import {News} from "./news";
 import {Logo, MenuColors} from "./main.enums";
+import {Projects} from "./projects";
 
 const css = require('../scss/main.scss');
 
@@ -20,6 +21,7 @@ class App {
                 new Header({menuColors: MenuColors.darck, logo: Logo.darck, shwFiltr: false});
                 break;
             case 'projects':
+                new Projects()
                 new Header({menuColors: MenuColors.darck, logo: Logo.darck, shwFiltr: true});
                 break;
             case 'news':
