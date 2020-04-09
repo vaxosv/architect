@@ -4,34 +4,18 @@ export class Projects {
     showState = true;
 
     constructor() {
-        this.addEventListeners()
+        this.setPositions()
     }
 
-    addEventListeners() {
-        $('.filter-head').on('click', (e) => {
-            const element = $(e.target);
-            const filterType = element.data('type');
-            this.showHide(element)
+    setPositions() {
+        $('.filter-head').each((i, el) => {
+            const element = $(el)
+            const pos = element.position().left
+
+            // const someContainerWidth = element.children().first().children().first().children().first()
+            element.children().first().children().first().css({
+                paddingLeft: pos - (840 / 2) + (element.width() / 2) + 4
+            })
         })
     }
-
-    showHide(element: JQuery) {
-        const list = $('.list-container')
-        if (this.showState) {
-            list.css({
-                // left: `${-100}px`,
-                height: $('.list').height()
-            })
-            this.showState = false;
-        } else {
-            list.css({
-                height: 0
-            })
-            this.showState = true;
-        }
-
-        console.log(this.showState);
-
-    }
-
 }
