@@ -14,7 +14,9 @@ export class Header {
         document.getElementById('menu').addEventListener('click', () => {
             if ($('.burger').hasClass('burgerActive')) {
                 this.activteMenu();
+                $('.description').css({zIndex: 0})
             } else {
+                $('.description').css({zIndex: 2})
                 this.deactivvateManu()
             }
         })

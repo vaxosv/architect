@@ -54,19 +54,56 @@
             }
           }
         }
+      }
+    }
+  }
+}
 
-        //    width: 100vw;
-        //    background-color: #fff;
-        //    margin-top: 40px;
-        //    left: 0;
-        //    z-index: 10;
-        //    top: 0;
-        //
-        //    .list {
-        //      .come {
-        //
-        //      }
-        //    }
+#filters-mobile {
+  position: fixed;
+  margin-top: 107px;
+  display: none;
+  z-index: 4;
+  background-color: #fff;
+  width: 100%;
+
+  .filter-head {
+    padding: 25px 0 0 15px;
+    border-top: 1px solid rgba(4, 28, 44, 0.08);
+
+    .filter-mobile-header {
+      display: inline-block;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        background-image: url("../assets/arrow/triangular.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        top: 1px;
+        right: -22px;
+        width: 16px;
+        height: 17px;
+        transition: all 400ms ease-in;
+      }
+    }
+
+    .animation {
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+
+    .some-container {
+      margin: 5px 0 25px;
+      height: 0;
+      overflow: hidden;
+      transition: all 500ms ease-in;
+
+      .some {
+        padding: 15px 0;
+        border-top: 1px solid rgba(4, 28, 44, 0.08);
       }
     }
   }
