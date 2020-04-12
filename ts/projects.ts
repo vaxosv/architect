@@ -1,10 +1,28 @@
-import {ellipsizeTextBox} from "./helpers/helper";
-
 export class Projects {
     showState = true;
 
     constructor() {
         this.getDevice()
+        this.loading()
+    }
+
+    loading() {
+        $('#header')
+            .find('#headerContainer')
+            .css('z-index', -1)
+        $('.filters-container').css('z-index', 1)
+        $('body').css('overflow', 'hidden')
+
+        window['imagesLoaded'](document.querySelectorAll('project'), function () {
+            $('#header')
+                .find('#headerContainer')
+                .css('z-index', 2)
+            $('filters-container').css('z-index', 4)
+            $('.loader').addClass('loader-done')
+
+            debugger
+            $('body').css('overflow', 'visible')
+        });
     }
 
     getDevice() {
@@ -68,38 +86,6 @@ export class Projects {
                 $(this).find('.filter-mobile-header').addClass('animation');
             }
         });
-
-        // $('.filter-head').each((i, el) => {
-        //     const element = $(el)
-        //     const child = element.find('.some-container');
-        //     const childCount = () => child.children().length
-        //
-        //     element.on('click', (e) => {
-        //         const clickedEl = $(e.target);
-        //
-        //
-        //         $('.some-container').each((i, el) => {
-        //             const element = $(el)
-        //             element.animate({
-        //                 height: 0
-        //             }, 1, () => {
-        //             })
-        //         })
-        //
-        //         $('.filter-mobile-header').each((i, el) => {
-        //             $(el).removeClass('animation')
-        //         })
-        //
-        //
-        //         clickedEl.addClass('animation')
-        //         child.animate({
-        //             height: childCount() * 49,
-        //             paddingTop: 15
-        //         }, {
-        //             duration: 1
-        //         })
-        //     })
-        // })
     }
 
     mobileOn() {

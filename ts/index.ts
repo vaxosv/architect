@@ -1,3 +1,4 @@
+import * as a from "../assets/js/imagesloaded.pkgd.min";
 import {Home} from "./home";
 import {Header} from "./header";
 import {about} from "./about";
@@ -9,7 +10,6 @@ const css = require('../scss/main.scss');
 
 class App {
     constructor() {
-        console.info('init')
         // @ts-ignore
         switch (page) {
             case 'home':
@@ -30,6 +30,12 @@ class App {
                 break;
             default:
         }
+
+        this.initLoading();
+
+    }
+
+    initLoading() {
     }
 }
 
