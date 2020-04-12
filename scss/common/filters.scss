@@ -74,6 +74,19 @@
     .filter-mobile-header {
       display: inline-block;
       position: relative;
+      padding-bottom: 25px;
+
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 19px;
+      /* identical to box height */
+
+      text-transform: uppercase;
+
+      color: rgba(32, 33, 33, 0.8);
+
 
       &:after {
         content: '';
@@ -97,13 +110,25 @@
 
     .some-container {
       margin: 5px 0 25px;
-      height: 0;
-      overflow: hidden;
-      transition: all 500ms ease-in;
+      display: none;
 
       .some {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        /* identical to box height */
+
+        text-transform: uppercase;
+
+        color: rgba(32, 33, 33, 0.8);
         padding: 15px 0;
         border-top: 1px solid rgba(4, 28, 44, 0.08);
+      }
+
+      .some-active {
+        font-weight: bold;
       }
     }
   }

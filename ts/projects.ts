@@ -59,37 +59,47 @@ export class Projects {
 
     mobileEventListeners() {
 
-        $('.filter-head').each((i, el) => {
-            const element = $(el)
-            const child = element.find('.some-container');
-            const childCount = () => child.children().length
+        $(".filter-head").click(function () {
+            $(".some-container").slideUp();
+            $(".filter-mobile-header").removeClass('animation');
 
-            element.on('click', (e) => {
-                const clickedEl = $(e.target);
+            if (!$(this).find('.some-container').is(':visible')){
+                $(this).find('.some-container').slideDown();
+                $(this).find('.filter-mobile-header').addClass('animation');
+            }
+        });
 
-
-                $('.some-container').each((i, el) => {
-                    const element = $(el)
-                    element.animate({
-                        height: 0
-                    }, 1, () => {
-                    })
-                })
-
-                $('.filter-mobile-header').each((i, el) => {
-                    $(el).removeClass('animation')
-                })
-
-
-                clickedEl.addClass('animation')
-                child.animate({
-                    height: childCount() * 49,
-                    paddingTop: 15
-                }, {
-                    duration: 1
-                })
-            })
-        })
+        // $('.filter-head').each((i, el) => {
+        //     const element = $(el)
+        //     const child = element.find('.some-container');
+        //     const childCount = () => child.children().length
+        //
+        //     element.on('click', (e) => {
+        //         const clickedEl = $(e.target);
+        //
+        //
+        //         $('.some-container').each((i, el) => {
+        //             const element = $(el)
+        //             element.animate({
+        //                 height: 0
+        //             }, 1, () => {
+        //             })
+        //         })
+        //
+        //         $('.filter-mobile-header').each((i, el) => {
+        //             $(el).removeClass('animation')
+        //         })
+        //
+        //
+        //         clickedEl.addClass('animation')
+        //         child.animate({
+        //             height: childCount() * 49,
+        //             paddingTop: 15
+        //         }, {
+        //             duration: 1
+        //         })
+        //     })
+        // })
     }
 
     mobileOn() {
