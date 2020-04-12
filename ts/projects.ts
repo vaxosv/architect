@@ -20,7 +20,6 @@ export class Projects {
             $('filters-container').css('z-index', 4)
             $('.loader').addClass('loader-done')
 
-            debugger
             $('body').css('overflow', 'visible')
         });
     }

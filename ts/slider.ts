@@ -1,4 +1,5 @@
 import {tns} from "../assets/js/tini";
+import * as $ from "jquery";
 
 export class slider {
     private sliderItemDom: any;
@@ -30,6 +31,23 @@ export class slider {
             this.customizedFunction(e, name)
             this.getActiveButton(e)
 
+        });
+        this.loading()
+    }
+
+    loading() {
+        $('#header')
+            .find('#headerContainer')
+            .css('z-index', -1)
+        $('body').css('overflow', 'hidden')
+
+        window['imagesLoaded'](document.querySelectorAll('item'), function () {
+            $('#header')
+                .find('#headerContainer')
+                .css('z-index', 2)
+            $('filters-container').css('z-index', 4)
+            $('.loader').addClass('loader-done')
+            $('body').css('overflow', 'visible')
         });
     }
 
