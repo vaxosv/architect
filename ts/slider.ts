@@ -30,6 +30,12 @@ export class slider {
         slider.events.on('transitionStart', (e: any, name: any) => {
             this.customizedFunction(e, name)
             this.getActiveButton(e)
+            if (window.innerWidth >= 1024) {
+                this.animation(e)
+            }
+        })
+
+        slider.events.on('transitionEnd', (e: any, name: any) => {
 
         });
         this.loading()
@@ -96,7 +102,7 @@ export class slider {
     }
 
     animation(info: any) {
-        const div = $('#description')
+        const div = $('.home-slider-description')
         div.animate({
             left: "-=250",
             opacity: 0
