@@ -1,9 +1,15 @@
 import {ellipsizeTextBox} from "./helpers/helper";
+import * as $ from "jquery";
 
 export class News {
     constructor() {
         this.threeDots();
         this.eventListeners()
+        this.loading()
+    }
+
+    loading() {
+        $('.loader').addClass('loader-done')
     }
 
     threeDots() {
