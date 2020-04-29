@@ -52,22 +52,19 @@
       width: 50%;
     }
 
-    .image {
-      img {
-
-        @include tablet {
-          max-width: 200px;
-        }
-
-        @include phone-sm {
-          max-width: 130px;
-        }
-      }
-
-    }
-
     .persone {
       margin-bottom: 50px;
+
+      .image {
+        img {
+          max-width: 350px;
+
+          @include phone-sm {
+            max-width: 130px;
+          }
+        }
+
+      }
 
       .name {
         height: 34px;
