@@ -22,7 +22,7 @@ class App {
                 break;
             case 'projects':
                 new Projects()
-                new Header({menuColors: MenuColors.darck, logo: Logo.darck, shwFiltr: true});
+                new Header({menuColors: MenuColors.darck, logo: Logo.darck, shwFiltr: false});
                 break;
             case 'news':
                 new News();
