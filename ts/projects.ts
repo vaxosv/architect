@@ -1,7 +1,10 @@
+import {ProjectGallery} from "./project-gallery";
+
 export class Projects {
     showState = true;
 
     constructor() {
+        new ProjectGallery()
         this.getDevice()
         this.loading()
     }
