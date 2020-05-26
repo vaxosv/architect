@@ -2,6 +2,10 @@
 @import "../vatiables";
 
 #headerContainer{
+  z-index: 10;
+}
+header#header{
+  position: relative;
   z-index: 4;
 }
 .header {
@@ -13,7 +17,7 @@
   font-size: $bigFint;
   padding: 20px 50px 15px;
   top: 0;
-
+  z-index: 10;
   .logo {
 
     .logoContainer {
@@ -61,9 +65,6 @@
       background-position: center;
     }
 
-    .closeActive {
-      background-image: url("../assets/logo/close.svg");
-    }
 
     .burgerActive{}
     .burgerActive-white {
@@ -74,6 +75,9 @@
       background-image: url("../assets/logo/menu-darck.svg");
     }
 
+    .closeActive {
+      background-image: url("../assets/logo/close.svg");
+    }
     @include tablet {
       display: flex;
       justify-content: center;

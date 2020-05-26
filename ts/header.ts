@@ -23,7 +23,9 @@ export class Header {
     };
 
     activteMenu() {
-        $('#headerContainer').removeClass('white')
+        if (!this.menuConfig.transparent) {
+            $('#headerContainer').removeClass('white')
+        }
         $('#header').addClass('mobile_active')
         $('.filter').addClass('hide')
         $('.logoContainer').addClass('menu-open')
@@ -41,7 +43,9 @@ export class Header {
     }
 
     deactivvateManu() {
-        $('#headerContainer').addClass('white')
+        if (!this.menuConfig.transparent) {
+            $('#headerContainer').addClass('white')
+        }
         $('#header').removeClass('mobile_active')
         $('.filter').removeClass('hide')
         $('.logoContainer').removeClass('menu-open')

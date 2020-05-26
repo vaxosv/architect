@@ -13,4 +13,5 @@ export interface MenuConfig {
     menuColors: MenuColors;
     logo: Logo;
     shwFiltr: boolean;
+    transparent?: boolean
 }

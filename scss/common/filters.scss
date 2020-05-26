@@ -1,6 +1,7 @@
 .filters-container {
   position: fixed;
   width: 100%;
+  z-index: 4!important;
   margin-top: 107px;
   background-color: #fff;
 
@@ -35,7 +36,7 @@
         left: 0;
         //background-color: #fff;
 
-        .list {
+        .filter-list {
           padding-top: 40px;
           width: 100vw;
           background-color: #fff;

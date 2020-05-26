@@ -5,6 +5,7 @@ import {about} from "./about";
 import {News} from "./news";
 import {Logo, MenuColors} from "./main.enums";
 import {Projects} from "./projects";
+import {projectItem} from "./projectItem"
 
 const css = require('../scss/main.scss');
 
@@ -14,7 +15,7 @@ class App {
         switch (page) {
             case 'home':
                 new Home();
-                new Header({menuColors: MenuColors.white, logo: Logo.white, shwFiltr: false});
+                new Header({menuColors: MenuColors.white, logo: Logo.white, shwFiltr: false, transparent: true});
                 break;
             case 'about':
                 new about();
@@ -22,10 +23,14 @@ class App {
                 break;
             case 'projects':
                 new Projects()
-                new Header({menuColors: MenuColors.darck, logo: Logo.darck, shwFiltr: false});
+                new Header({menuColors: MenuColors.darck, logo: Logo.darck, shwFiltr: true});
                 break;
             case 'news':
                 new News();
+                new Header({menuColors: MenuColors.darck, logo: Logo.darck, shwFiltr: false});
+                break;
+            case 'projectItem':
+                new projectItem();
                 new Header({menuColors: MenuColors.darck, logo: Logo.darck, shwFiltr: false});
                 break;
             default:
