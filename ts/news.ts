@@ -6,18 +6,19 @@ export class News {
         this.threeDots();
         this.eventListeners()
         this.loading()
-        this.ajax()
     }
 
 
     ajax() {
         let pageIndex = 0
 
+        if ($(window).scrollTop() ===
+            $(document).height() - $(window).height()) {
             GetData();
-        if ($(window).scrollTop() === $(document).height() - $(window).height()) {
         }
 
         $(window).scroll(function () {
+            console.log(12)
             if ($(window).scrollTop() ===
                 $(document).height() - $(window).height()) {
                 GetData();
@@ -27,7 +28,7 @@ export class News {
         function GetData() {
             $.ajax({
                 type: 'Post',
-                url: 'home/GetNewses',
+                url: 'http://drada.ge/Home/GetNewses',
                 data: {"index": pageIndex},
                 dataType: 'json',
                 success: function (data) {
@@ -74,7 +75,6 @@ export class News {
                     $("#progress").hide();
                 },
                 error: function (err) {
-                    console.log(err)
                     alert("Error while retrieving data!");
                 }
             });
