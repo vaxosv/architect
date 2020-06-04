@@ -5,7 +5,6 @@ export function ellipsizeTextBox(el: any, text: string, length: number, fullText
         `${text.substring(0, maxStrLength)}... <span class="readMore">Reade More</span>`
         : text;
     el.html(innerText)
-    console.log(innerText)
 }
 
 
