@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'geo';
+    src: url(./BPG_Web_001_Caps.woff) format('woff');
+}
+
+* {
+    font-family: geo;
+}
