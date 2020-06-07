@@ -4,10 +4,7 @@
 .stafHeader {
   margin: 0 auto;
   max-width: 1110px;
-  font-family: $fontFamily-BPG-Caps;
-
-  @include tablet {
-  }
+  font-family: $fontFamily-Default;
 
   @include phone-sm {
     margin: 70px 0 30px;
