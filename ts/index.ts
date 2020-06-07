@@ -33,6 +33,10 @@ class App {
                 new projectItem();
                 new Header({menuColors: MenuColors.darck, logo: Logo.darck, shwFiltr: false});
                 break;
+            case 'contact':
+                // new projectItem();
+                new Header({menuColors: MenuColors.darck, logo: Logo.darck, shwFiltr: false});
+                break;
             default:
         }
 
