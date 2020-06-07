@@ -5,13 +5,14 @@
 .about {
   display: flex;
   justify-content: center;
-  font-family: $fontFemily;
   padding-top: 120px;
   width: 100%;
   margin: 0 auto;
   max-width: 1110px;
+  font-family: $fontFamily-BPG-NP;
 
   h2 {
+    font-family: $fontFamily-BPG-Caps;
     font-style: normal;
     font-weight: bold;
     font-size: 48px;
@@ -24,21 +25,18 @@
   .text-container {
     padding: 10px 10%;
     font-size: 16px;
-    font-family: Open Sans;
+    font-family: $fontFamily-BPG-NP;
 
     .main-text {
       font-size: 16px;
-      font-family: Open Sans;
     }
 
     .paragraph-one {
       font-size: 16px;
-      font-family: Open Sans;
     }
 
     .paragraph-two {
       font-size: 16px;
-      font-family: Open Sans;
     }
 
     ul {
@@ -46,7 +44,6 @@
       padding-left: 10%;
       li {
         font-size: 16px;
-        font-family: Open Sans;
         margin: 5px 0;
         list-style: disc;
       }

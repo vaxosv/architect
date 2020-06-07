@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'BPG NP';
+    src: url('BPGNP.eot');
+    src: url('BPGNP.eot?#iefix') format('embedded-opentype'),
+        url('BPGNP.woff2') format('woff2'),
+        url('BPGNP.woff') format('woff'),
+        url('BPGNP.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BPG WEB 001 Caps';
+    src: url('BPGWEB001Caps.eot');
+    src: url('BPGWEB001Caps.eot?#iefix') format('embedded-opentype'),
+        url('BPGWEB001Caps.woff2') format('woff2'),
+        url('BPGWEB001Caps.woff') format('woff'),
+        url('BPGWEB001Caps.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -45,7 +45,7 @@ header#header{
     position: absolute;
     top: 40%;
     left: 50%;
-    font-family: $fontFemily;
+    font-family: $fontFamily;
     font-weight: normal;
     font-size: 14px;
     line-height: 19px;
@@ -101,7 +101,7 @@ header#header{
 
 
       a {
-        font-family: $fontFemily;
+        font-family: $fontFamily;
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
@@ -184,7 +184,7 @@ header#header{
 
         li {
           margin-top: 40px;
-          font-family: Open Sans;
+          font-family: $fontFamily;
           font-style: normal;
           font-weight: normal;
           font-size: 16px;

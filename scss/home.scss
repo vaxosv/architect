@@ -10,7 +10,7 @@
     position: absolute;
     bottom: 50px;
     left: 150px;
-    font-family: $fontFemily;
+    font-family: $fontFamily;
 
     @include phone-sm {
       bottom: 75px;

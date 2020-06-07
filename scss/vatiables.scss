@@ -11,4 +11,7 @@ $lightWhite: #EBEEEE;
 $langWhiteColor: rgba(32, 33, 33, 0.7);
 $footerText: rgba(255, 255, 255, 0.5);
 
-$fontFemily: 'Open Sans', sans-serif;
+$fontFamily-Default: 'Open Sans';
+$fontFamily-BPG-NP: 'BPG-NP';
+$fontFamily-BPG-Caps: 'BPG-Caps';
+$fontFamily: $fontFamily-Default;

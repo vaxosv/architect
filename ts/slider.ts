@@ -10,6 +10,25 @@ export class slider {
         // this.loop()
     }
 
+    handleFocus(slider: any) {
+        $(document).ready(function () {
+            $(window).one("focus", SomeFocusMethod);
+        });
+
+        var SomeFocusMethod = function () {
+            slider.play()
+            $(window).one("blur", SomeBlurMethod);
+        }
+
+        var SomeBlurMethod = function () {
+            // do stuff
+            slider.pause()
+            $(window).one("focus", SomeFocusMethod);
+        }
+
+
+    }
+
     initSlider() {
         let slider = tns({
             container: '.my-slider',
@@ -23,6 +42,8 @@ export class slider {
             touch: true,
             // mouseDrag: true,
         })
+
+        this.handleFocus(slider)
 
         this.createButtons(slider.getInfo())
         this.getActiveButton(slider.getInfo())
@@ -38,6 +59,9 @@ export class slider {
         slider.events.on('transitionEnd', (e: any, name: any) => {
 
         });
+
+        // slider.pause()
+        // slider.play()
         this.loading()
     }
 

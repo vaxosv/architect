@@ -65,12 +65,10 @@ module.exports = {
                 use: [{
                     loader: "file-loader",
                     options: {
-                        publicPath: '/assets',
-                        outputPath: '/assets/fonts',
+                        publicPath: '../',
                         name: '[path][name].[ext]',
                     }
-                }
-                ],
+                }],
             },
         ]
     },
