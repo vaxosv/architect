@@ -12,6 +12,20 @@ $langWhiteColor: rgba(32, 33, 33, 0.7);
 $footerText: rgba(255, 255, 255, 0.5);
 
 $fontFamily-Default: 'Open Sans';
-$fontFamily-BPG-NP: 'BPG-NP';
 $fontFamily-BPG-Caps: 'BPG-Caps';
-$fontFamily: $fontFamily-Default;
+$fontFamily-BPG-NP: 'BPG-NP';
+
+
+
+// eng version
+//$fontFamily-header: $fontFamily-Default;
+//$fontFamily-paragraphs: $fontFamily-Default;
+//$fontFamily-cross: $fontFamily-BPG-Caps;
+//$fontFamily: $fontFamily-Default;
+
+
+// ka version
+$fontFamily-header: $fontFamily-BPG-Caps;
+$fontFamily-paragraphs: $fontFamily-BPG-NP;
+$fontFamily-cross: $fontFamily-Default;
+$fontFamily: $fontFamily-BPG-Caps;

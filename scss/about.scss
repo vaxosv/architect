@@ -9,12 +9,11 @@
   width: 100%;
   margin: 0 auto;
   max-width: 1110px;
-  font-family: $fontFamily-Default;
+  font-family: $fontFamily-paragraphs;
 
   h2 {
-    font-family: $fontFamily-Default;
+    font-family: $fontFamily-header;
     font-style: normal;
-    font-weight: bold;
     font-size: 48px;
     line-height: 130%;
     text-transform: capitalize;
@@ -22,14 +21,13 @@
     padding-bottom: 40px;
   }
 
+  .main-text {
+    font-size: 16px;
+  }
   .text-container {
     padding: 10px 10%;
     font-size: 16px;
-    font-family: $fontFamily-Default;
 
-    .main-text {
-      font-size: 16px;
-    }
 
     .paragraph-one {
       font-size: 16px;
@@ -43,6 +41,7 @@
       margin-top: 10px;
       padding-left: 10%;
       li {
+        font-family: $fontFamily-paragraphs;
         font-size: 16px;
         margin: 5px 0;
         list-style: disc;

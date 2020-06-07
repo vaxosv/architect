@@ -133,7 +133,6 @@ header#header{
 
     .lang {
       height: 38px;
-      width: 93px;
       background: rgba(32, 33, 33, 0.4);
       border-radius: 50px;
       display: flex;
@@ -147,6 +146,11 @@ header#header{
       line-height: 100%;
 
       color: $maincColor;
+
+      .language {
+        margin: 0 10px;
+        font-family: $fontFamily-cross;
+      }
     }
   }
 }
@@ -195,7 +199,6 @@ header#header{
     }
 
     .language {
-      width: 91px;
       height: 34px;
       left: 115px;
       top: 446px;
@@ -209,7 +212,8 @@ header#header{
       margin-top: 70px;
 
       .lang {
-
+        margin: 0 10px;
+        font-family: $fontFamily-cross;
       }
     }
   }
