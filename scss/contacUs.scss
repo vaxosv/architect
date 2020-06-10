@@ -79,6 +79,8 @@
       width: 635px;
       height: 610px;
       background-color: gray;
+      background-position: center;
+      background-size: cover;
 
       a {
         display: block;
@@ -89,7 +91,6 @@
 
       @include phone-sm {
         width: 100%;
-        height: 250px;
       }
     }
   }

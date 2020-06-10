@@ -1,4 +1,3 @@
-import * as a from "../assets/js/imagesloaded.pkgd.min";
 import {Home} from "./home";
 import {Header} from "./header";
 import {about} from "./about";
@@ -6,6 +5,7 @@ import {News} from "./news";
 import {Logo, MenuColors} from "./main.enums";
 import {Projects} from "./projects";
 import {projectItem} from "./projectItem"
+import {Contact} from "./contact";
 
 const css = require('../scss/main.scss');
 
@@ -34,7 +34,7 @@ class App {
                 new Header({menuColors: MenuColors.darck, logo: Logo.darck, shwFiltr: false});
                 break;
             case 'contact':
-                // new projectItem();
+                new Contact();
                 new Header({menuColors: MenuColors.darck, logo: Logo.darck, shwFiltr: false});
                 break;
             default:
