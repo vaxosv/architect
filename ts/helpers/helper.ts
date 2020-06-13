@@ -2,7 +2,7 @@ export function ellipsizeTextBox(el: any, text: string, length: number, fullText
     const maxStrLength = length;
     let innerText = ''
     innerText = text.length > maxStrLength ?
-        `${text.substring(0, maxStrLength)}... <span class="readMore">Reade More</span>`
+        `${text.substring(0, maxStrLength)}... <span class="readMore">Read More</span>`
         : text;
     el.html(innerText)
 }

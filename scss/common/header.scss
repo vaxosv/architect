@@ -11,7 +11,7 @@ header#header{
 .header {
   display: flex;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   justify-content: space-between;
   align-items: center;
   font-size: $bigFint;

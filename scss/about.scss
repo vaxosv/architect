@@ -5,11 +5,11 @@
 .about {
   display: flex;
   justify-content: center;
-  padding-top: 120px;
   width: 100%;
   margin: 0 auto;
   max-width: 1110px;
   font-family: $fontFamily-paragraphs;
+  padding: 120px 15px 0;
 
   h2 {
     font-family: $fontFamily-header;
@@ -19,6 +19,10 @@
     text-transform: capitalize;
     color: #202121;
     padding-bottom: 40px;
+
+    @include phone-sm {
+      font-size: 21px;
+    }
   }
 
   .main-text {

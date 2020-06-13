@@ -18,6 +18,10 @@ export class about {
             $('.stafHeader > h2').css({
                 marginLeft: left
             })
+
+            $('.aboutContainer > h2').css({
+                marginLeft: left - 15
+            })
         }
     }
 

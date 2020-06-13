@@ -15,6 +15,8 @@ $fontFamily-Default: 'Open Sans';
 $fontFamily-BPG-Caps: 'BPG-Caps';
 $fontFamily-BPG-NP: 'BPG-NP';
 
+$font-weight-bod: bold;
+$font-weight-classic: 500;
 
 
 // eng version
@@ -22,6 +24,7 @@ $fontFamily-header: $fontFamily-Default;
 $fontFamily-paragraphs: $fontFamily-Default;
 $fontFamily-cross: $fontFamily-BPG-Caps;
 $fontFamily: $fontFamily-Default;
+$font-weight: $font-weight-bod;
 
 
 // ka version
@@ -29,3 +32,4 @@ $fontFamily: $fontFamily-Default;
 //$fontFamily-paragraphs: $fontFamily-BPG-NP;
 //$fontFamily-cross: $fontFamily-Default;
 //$fontFamily: $fontFamily-BPG-Caps;
+//$font-weight: $font-weight-classic
