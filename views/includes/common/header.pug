@@ -1,4 +1,4 @@
--let values = [{name: 'პროექტები', link: 'projects.html'},{name: 'About Us', link: "./about.html"}, {name: 'News', link: "./news.html"}, {name: 'Contact', link: "contact.html"}]
+-let values = [{name: 'პროექტები', link: 'projects.html', active: false},{name: 'About Us', link: "./about.html", active: true}, {name: 'News', link: "./news.html", active: false}, {name: 'Contact', link: "contact.html", active: false}]
 header#header
     //.header-darck add this to darck them
     #headerContainer
@@ -9,8 +9,12 @@ header#header
         .container
             ul.manuItems
                     each value in values
-                        a(href=`${value.link}`)
-                            li= value.name
+                        if value.active
+                            a.activeMenuItem(href=`${value.link}`)
+                                li= value.name
+                        else
+                            a(href=`${value.link}`)
+                                li= value.name
             .lang
                 .language ქართული
         .burgerMenu#menu

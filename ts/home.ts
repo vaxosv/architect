@@ -6,6 +6,7 @@ export class Home {
 
     constructor() {
         new slider();
+        $('.item').height(window.innerHeight)
     }
 }
 

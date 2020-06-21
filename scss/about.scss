@@ -27,18 +27,22 @@
 
   .main-text {
     font-size: 16px;
+    color: rgba(32, 33, 33, 0.75);
   }
   .text-container {
     padding: 10px 10%;
     font-size: 16px;
-
+    color: rgba(32, 33, 33, 0.75);
 
     .paragraph-one {
       font-size: 16px;
+      color: rgba(32, 33, 33, 0.75);
+
     }
 
     .paragraph-two {
       font-size: 16px;
+      color: rgba(32, 33, 33, 0.75);
     }
 
     ul {
@@ -46,11 +50,15 @@
       padding-left: 10%;
       li {
         font-family: $fontFamily-paragraphs;
+        color: rgba(32, 33, 33, 0.75);
         font-size: 16px;
         margin: 5px 0;
         list-style: disc;
       }
     }
+  }
+  .end {
+    color: rgba(32, 33, 33, 0.75);
   }
 
 

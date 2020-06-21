@@ -26,6 +26,11 @@ header#header{
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+
+      @include phone-sm {
+        width: 43px;
+        height: 36px;
+      }
     }
 
     .logo-darck {
@@ -98,7 +103,6 @@ header#header{
     .manuItems {
       display: flex;
       margin-right: 30px;
-
 
       a {
         font-family: $fontFamily;
@@ -185,8 +189,8 @@ header#header{
 
     ul {
       a {
-
         li {
+          color: rgba(255, 255, 255, 0.8);
           margin-top: 40px;
           font-family: $fontFamily;
           font-style: normal;
@@ -212,6 +216,8 @@ header#header{
       margin-top: 70px;
 
       .lang {
+        transform: translateY(1px);
+        color:  rgba(255, 255, 255, 0.7);
         margin: 0 10px;
         font-family: $fontFamily-cross;
       }
@@ -225,8 +231,14 @@ header#header{
   .container {
 
     .manuItems {
+      .activeMenuItem {
+        color: rgb(32, 33, 33);
+        opacity: 1;
+      }
+
       a {
-        color: $maincDarckColor;
+        color: #202121;
+        opacity: 0.5;
 
         &:last-child {
           position: relative;
