@@ -123,11 +123,13 @@ export class Projects {
         const filters = $('.filter-head');
         const cover = $('body');
 
-        filters.hover(() => {
+        filters.hover((e) => {
+            $(e.target).find('span').addClass('active-Filter-Header')
             cover.addClass('openFilter')
         })
 
         filters.mouseleave(() => {
+            $('.active-Filter-Header').removeClass('active-Filter-Header')
             cover.removeClass('openFilter')
         })
     }

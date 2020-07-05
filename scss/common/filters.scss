@@ -24,9 +24,31 @@
     background-color: #fff;
 
     .filter-head {
-      //  cursor: pointer;
-      //  position: relative;
       cursor: pointer;
+      font-family: $fontFamily;
+      font-size: 18px;
+      line-height: 25px;
+
+      span {
+        margin-left: 10px;
+        width: 10px;
+        height: 10px;
+        background-size: cover;
+        background-position: center;
+        background-image: url("../assets/arrow/triangular.svg");
+        display: inline-block;
+      }
+
+      .active-Filter-Header {
+        margin-left: 10px;
+        width: 10px;
+        height: 10px;
+        background-size: cover;
+        background-position: center;
+        background-image: url("../assets/arrow/triangular.svg");
+        display: inline-block;
+        transform: rotate(180deg);
+      }
 
       &:hover .list-container {
         display: block;
@@ -64,7 +86,7 @@
 
 #filters-mobile {
   position: fixed;
-  margin-top: 107px;
+  margin-top: 72px;
   display: none;
   z-index: 4;
   background-color: #fff;
