@@ -22,6 +22,7 @@
     padding-bottom: 40px;
 
     @include phone-sm {
+      padding-bottom: 30px;
       font-size: 21px;
     }
   }
@@ -29,21 +30,37 @@
   .main-text {
     font-size: 16px;
     color: rgba(32, 33, 33, 0.75);
+
+    @include phone-sm {
+      font-size: 14px;
+    }
   }
   .text-container {
     padding: 10px 10%;
     font-size: 16px;
     color: rgba(32, 33, 33, 0.75);
 
+    @include phone-sm {
+      font-size: 14px;
+    }
+
     .paragraph-one {
       font-size: 16px;
       color: rgba(32, 33, 33, 0.75);
+
+      @include phone-sm {
+        font-size: 14px;
+      }
 
     }
 
     .paragraph-two {
       font-size: 16px;
       color: rgba(32, 33, 33, 0.75);
+
+      @include phone-sm {
+        font-size: 14px;
+      }
     }
 
     ul {
@@ -55,11 +72,19 @@
         font-size: 16px;
         margin: 5px 0;
         list-style: disc;
+
+        @include phone-sm {
+          font-size: 14px;
+        }
       }
     }
   }
   .end {
     color: rgba(32, 33, 33, 0.75);
+
+    @include phone-sm {
+      font-size: 14px;
+    }
   }
 
 
