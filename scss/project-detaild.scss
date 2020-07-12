@@ -21,6 +21,7 @@
   }
 
   .full-image {
+    margin-bottom: 150px;
     img {
       width: 100%;
       height: auto;
@@ -105,7 +106,7 @@
   }
 
   .double-big-images {
-    margin: 0 auto;
+    margin: 0 auto 150px;
     max-width: 1640px;
     width: 100%;
     display: flex;
@@ -135,7 +136,7 @@
   }
 
   .image-right {
-    margin: 0 auto;
+    margin: 0 auto 150px;
     max-width: 1640px;
     width: 100%;
     display: flex;
@@ -158,6 +159,7 @@
   }
 
   .text-half-right {
+    margin: 150px;
     max-width: 1515px;
     display: flex;
     justify-content: flex-end;
@@ -195,7 +197,7 @@
   .image-and-text-center {
     max-width: 1640px;
     display: flex;
-    margin: 0 auto;
+    margin: 0 auto 150px;
 
     @include phone-sm {
       padding: 0 15px;
@@ -249,7 +251,7 @@
     max-width: 1110px;
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
+    margin: 0 auto 150px;
 
     @include phone-sm {
       padding: 0 15px;
@@ -286,7 +288,7 @@
     max-width: 1640px;
     width: 100%;
     display: flex;
-    margin: 0 auto;
+    margin: 0 auto 150px;
 
 
     @include phone-sm {
@@ -351,7 +353,7 @@
     max-width: 1640px;
     width: 100%;
     display: flex;
-    margin: 0 auto;
+    margin: 0 auto 150px;
     flex-direction: row-reverse;
 
     @include phone-sm {

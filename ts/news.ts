@@ -35,7 +35,10 @@ export class News {
             const element = $(el)
             const elementText = element.data('text');
             const elementRead = element.data('read');
-            ellipsizeTextBox(element, elementText, elementRead,230, false);
+            const elementLink = element.data('link');
+            const elementLinkName = element.data('lnmae');
+
+            ellipsizeTextBox(elementLinkName,elementLink ,element, elementText, elementRead,230, false);
         })
     }
 
