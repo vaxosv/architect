@@ -1,5 +1,3 @@
-import {ProjectGallery} from "./project-gallery";
-
 export class Projects {
     showState = true;
 
@@ -29,10 +27,29 @@ export class Projects {
     getDevice() {
         const windowWidth = window.innerWidth;
         console.log(windowWidth)
+        let show = false
+
+        if (show) {
+            $('.filters-container').show()
+        } else {
+            $('.filters-container').hide()
+        }
+
         if (windowWidth >= 1024) {
             $('#filters-mobile').hide();
             this.setPositions()
             this.events()
+            $('#headerContainer')
+                .find('.filter')
+                .on('click', (e) => {
+                    if (show) {
+                        $('.filters-container').hide()
+                        show = false
+                    } else {
+                        $('.filters-container').show()
+                        show = true
+                    }
+                })
         } else {
             $('#filters-desktop').hide();
             $('.projects').css('padding-top', 0)
@@ -82,7 +99,7 @@ export class Projects {
             $(".some-container").slideUp();
             $(".filter-mobile-header").removeClass('animation');
 
-            if (!$(this).find('.some-container').is(':visible')){
+            if (!$(this).find('.some-container').is(':visible')) {
                 $(this).find('.some-container').slideDown();
                 $(this).find('.filter-mobile-header').addClass('animation');
             }
