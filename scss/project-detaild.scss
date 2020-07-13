@@ -3,6 +3,7 @@
 
 .project-detaild {
   padding-top: 107px;
+  color: $footerText !important;
 
   .brake-small {
     height: 70px;
@@ -66,7 +67,7 @@
       line-height: 160%;
       letter-spacing: 0.02em;
       text-transform: capitalize;
-      color: #202121;
+      //color: #202121;
       @include phone-sm {
         margin: 0 auto 50px;
       }
@@ -178,6 +179,10 @@
     display: flex;
     justify-content: flex-end;
     padding: 0 15px;
+
+    @include phone-sm {
+      margin: 0;
+    }
 
     .text-container {
       width: 100%;

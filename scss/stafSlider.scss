@@ -75,6 +75,11 @@
         text-transform: capitalize;
         color: #202121;
         margin-top: 20px;
+        display: inline-block;
+
+        @include phone-sm {
+          max-width: 100px;
+        }
       }
 
       .possition {
