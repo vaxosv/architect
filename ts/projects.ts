@@ -143,6 +143,7 @@ export class Projects {
         filters.hover((e) => {
             $(e.target).find('span').addClass('active-Filter-Header')
             cover.addClass('openFilter')
+            this.setPositions()
         })
 
         filters.mouseleave(() => {

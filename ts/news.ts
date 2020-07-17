@@ -38,7 +38,7 @@ export class News {
             const elementLink = element.data('link');
             const elementLinkName = element.data('lnmae');
 
-            ellipsizeTextBox(elementLinkName,elementLink ,element, elementText, elementRead,230, false);
+            ellipsizeTextBox(elementLinkName,elementLink ,element, elementText, elementRead,255, false);
         })
     }
 
