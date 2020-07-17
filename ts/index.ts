@@ -41,7 +41,7 @@ class App {
         }
 
         this.initLoading();
-        const size = $('body').data('textsize')
+        const size = $('.main-font-size').data('textsize')
         smallFont(size)
 
     }
