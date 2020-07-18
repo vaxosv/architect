@@ -86,7 +86,6 @@ export class Projects {
                 element.hasClass('header')
 
             if (!hasClass) {
-                console.log('body')
                 this.mobileOff()
                 this.showState = true;
             }

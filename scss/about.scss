@@ -15,7 +15,7 @@
     font-weight: bold;
     font-family: $fontFamily-header;
     font-style: normal;
-    font-size: 48px;
+    font-size: 48rem;
     line-height: 130%;
     text-transform: capitalize;
     color: #202121;
@@ -24,43 +24,43 @@
     @include phone-sm {
       padding-left: 5px;
       padding-bottom: 30px;
-      font-size: 21px;
+      font-size: 21rem;
     }
   }
 
   .main-text {
-    font-size: 16px;
+    font-size: 16rem;
     color: rgba(32, 33, 33, 0.75);
 
     @include phone-sm {
-      font-size: 14px;
+      font-size: 14rem;
     }
   }
   .text-container {
     padding: 10px 10%;
-    font-size: 16px;
+    font-size: 16rem;
     color: rgba(32, 33, 33, 0.75);
 
     @include phone-sm {
-      font-size: 14px;
+      font-size: 14rem;
     }
 
     .paragraph-one {
-      font-size: 16px;
+      font-size: 16rem;
       color: rgba(32, 33, 33, 0.75);
 
       @include phone-sm {
-        font-size: 14px;
+        font-size: 14rem;
       }
 
     }
 
     .paragraph-two {
-      font-size: 16px;
+      font-size: 16rem;
       color: rgba(32, 33, 33, 0.75);
 
       @include phone-sm {
-        font-size: 14px;
+        font-size: 14rem;
       }
     }
 
@@ -70,12 +70,12 @@
       li {
         font-family: $fontFamily-paragraphs;
         color: rgba(32, 33, 33, 0.75);
-        font-size: 16px;
+        font-size: 16rem;
         margin: 5px 0;
         list-style: disc;
 
         @include phone-sm {
-          font-size: 14px;
+          font-size: 14rem;
         }
       }
     }
@@ -84,7 +84,7 @@
     color: rgba(32, 33, 33, 0.75);
 
     @include phone-sm {
-      font-size: 14px;
+      font-size: 14rem;
     }
   }
 

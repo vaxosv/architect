@@ -42,18 +42,12 @@ class App {
 
         this.initLoading();
         const size = $('.main-font-size').data('textsize')
-        smallFont(size)
-
     }
 
     initLoading() {
     }
 }
-function smallFont(num: any) {
-    let element = $('*')
-    let fs = element.css('font-size');
-    element.css('font-size', (parseInt(fs) - num))
-}
+
 
 window.onload = () => {
     new App()

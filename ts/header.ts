@@ -8,6 +8,7 @@ export class Header {
         this.setMenuColor(menuConfig.menuColors);
         this.corretLogo()
         this.correctBurger()
+        this.click()
     }
 
     eventLIstners() {
@@ -91,5 +92,23 @@ export class Header {
         }
 
         $('.filter').hide()
+    }
+
+    click() {
+        $('header ul a').on('click', (e) => {
+            // @ts-ignore
+            let elem = e.target.parentElement.href
+            this.redirect(elem)
+        })
+
+        $('.lang').on('click', (e) => {
+            // @ts-ignore
+            let link = e.target.childNodes[1].href
+            this.redirect(link)
+        })
+    }
+
+    redirect(input: string) {
+        window.location.href = input
     }
 }
