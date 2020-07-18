@@ -208,21 +208,20 @@ header#header{
     }
 
     .language {
-      height: 34px;
-      left: 115px;
-      top: 446px;
-      font-size: 14rem;
-      font-weight: 300;
-      border-radius: 50px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 70px;
 
       .lang {
+        height: 34px;
+        left: 115px;
+        top: 446px;
+        font-size: 14rem;
+        font-weight: 300;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         transform: translateY(1px);
         color:  rgba(255, 255, 255, 0.7);
-        margin: 0 10px;
+        margin: 70px 10px 10px;
         font-family: $fontFamily-cross;
       }
     }
