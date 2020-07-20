@@ -82,6 +82,7 @@
   }
   .end {
     color: rgba(32, 33, 33, 0.75);
+    font-size: 16rem;
 
     @include phone-sm {
       font-size: 14rem;
