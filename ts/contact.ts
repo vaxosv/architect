@@ -21,5 +21,10 @@ export class Contact {
             $('html').css('overflow', 'visible')
 
         });
+        this.modifySCC()
+    }
+
+    modifySCC () {
+        $('body').css('height', '100vh')
     }
 }
