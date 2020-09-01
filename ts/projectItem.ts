@@ -12,7 +12,6 @@ export class projectItem {
             .find('#headerContainer')
             .css('z-index', -1)
         $('.filters-container').css('z-index', 1)
-        $('html').scrollTop( 0 )
         $('body').css('overflow', 'hidden')
         $('html').css('overflow', 'hidden')
 

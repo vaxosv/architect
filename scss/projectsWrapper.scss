@@ -13,6 +13,8 @@
     }
     a {
       width: 50%;
+      display: block;
+
       @include phone-sm {
         width: 100%;
       }
