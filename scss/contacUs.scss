@@ -38,7 +38,7 @@
       .name {
         color: rgba(255, 255, 255, 0.5);
         margin-bottom: 30px;
-        font-size: 24rem;
+        font-size: 20rem;
 
 
         @include phone-sm {
@@ -48,7 +48,7 @@
 
       .contant {
         margin-bottom: 70px;
-        font-size: 21rem;
+        font-size: 18em;
 
         @include phone-sm {
           margin-bottom: 50px;
@@ -58,7 +58,7 @@
       .social {
         margin-top: 175px;
         margin-bottom: 70px;
-        font-size: 21rem;
+        font-size: 18rem;
 
         @include phone-sm {
           margin-top: 50px;

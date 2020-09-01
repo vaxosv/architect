@@ -72,6 +72,11 @@
             display: flex;
             flex-wrap: wrap;
 
+
+            .bold {
+              font-weight: bold;
+            }
+
             .some {
               text-align: center;
               width: 33%;
