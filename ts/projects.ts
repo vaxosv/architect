@@ -4,6 +4,8 @@ export class Projects {
     constructor() {
         this.getDevice()
         this.loading()
+
+        this.lick()
     }
 
     loading() {
@@ -151,4 +153,13 @@ export class Projects {
         })
     }
 
+    private lick() {
+        $('.projects ul a').on('click', (e) => {
+            const elem = $(e.target)
+            const  a = elem.parents('a')[0]
+            const href = a.getAttribute("hraf")
+
+            window.location.replace(href)
+        })
+    }
 }
