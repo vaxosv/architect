@@ -154,6 +154,7 @@ export class Projects {
     }
 
     private lick() {
+        const aa = 'jumberai'
         $('.projects ul a').on('click', (e) => {
             const elem = $(e.target)
             const  a = elem.parents('a')[0]
