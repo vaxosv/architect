@@ -124,6 +124,8 @@ module.exports = {
         new HtmlWebpackInlineSVGPlugin()
     ],
     devServer: {
+        host: '0.0.0.0',//your ip address
+        disableHostCheck: true,
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
         port: 9000
