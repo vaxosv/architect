@@ -4,8 +4,9 @@ export class Projects {
     constructor() {
         this.getDevice()
         this.loading()
-
         this.lick()
+
+        console.log('test verssion: 0.0.1')
     }
 
     loading() {
