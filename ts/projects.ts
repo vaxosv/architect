@@ -6,7 +6,7 @@ export class Projects {
         this.loading()
         this.lick()
 
-        console.log('test verssion: 0.0.1')
+        console.log('test verssion: 0.0.2')
     }
 
     loading() {
@@ -155,7 +155,7 @@ export class Projects {
     }
 
     private lick() {
-        $('.projects ul a').on('click', (e) => {
+        $('.projects ul a').children().on('click, touchstart', (e) => {
             const elem = $(e.target)
             const  a = elem.parents('a')[0]
             const href = a.getAttribute("hraf")
