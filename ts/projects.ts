@@ -156,6 +156,7 @@ export class Projects {
 
     private lick() {
         $('.projects ul a').children().on('click, touchstart', (e) => {
+            console.log('click')
             const elem = $(e.target)
             const  a = elem.parents('a')[0]
             const href = a.getAttribute("hraf")
