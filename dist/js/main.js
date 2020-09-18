@@ -12283,7 +12283,8 @@ var Projects = /** @class */ (function () {
             var elem = $(e.target);
             var a = elem.parents('a')[0];
             var href = a.getAttribute("hraf");
-            // window.location.replace(href)
+            debugger
+            window.location.replace(href)
         });
     };
     return Projects;
