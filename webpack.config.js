@@ -123,6 +123,9 @@ module.exports = {
         ]),
         new HtmlWebpackInlineSVGPlugin()
     ],
+    optimization:{
+        minimize: false
+    },
     devServer: {
         host: '0.0.0.0',//your ip address
         disableHostCheck: true,
