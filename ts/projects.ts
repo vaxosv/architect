@@ -155,15 +155,16 @@ export class Projects {
     }
 
     private lick() {
-        $('.projects ul a').children().on('click, touchstart', (e) => {
+        $('.projects ul a').children().on('click', (e) => {
             console.log('click')
             console.log(e)
+            console.log(e.target)
             alert()
             const elem = $(e.target)
             const  a = elem.parents('a')[0]
             const href = a.getAttribute("hraf")
 
-            window.location.replace(href)
+            // window.location.replace(href)
         })
     }
 }
