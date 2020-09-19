@@ -12143,7 +12143,7 @@ var Projects = /** @class */ (function () {
         this.getDevice();
         this.loading();
         this.lick();
-        console.log('test version: 0.0.4');
+        console.log('test version: 0.0.5');
     }
     Projects.prototype.loading = function () {
         $('#header')
@@ -12275,7 +12275,28 @@ var Projects = /** @class */ (function () {
         });
     };
     Projects.prototype.lick = function () {
-        $('.projects ul a').children().on('click', function (e) {
+        // $('.projects ul a').children().on('click', (e) => {
+        //     console.log('click')
+        //     console.log(e)
+        //     console.log(e.target)
+        //
+        //     const elem = $(e.target)
+        //     const  a = elem.parents('a')[0]
+        //     const href = a.getAttribute("href")
+        //     debugger
+        //     window.location.replace(href)
+        // })
+        $('.project').children().on('click', function (e) {
+            console.log('click');
+            console.log(e);
+            console.log(e.target);
+            var elem = $(e.target);
+            var a = elem.parents('a')[0];
+            var href = a.getAttribute("href");
+            debugger;
+            window.location.replace(href);
+        });
+        $('.project').on('click', function (e) {
             console.log('click');
             console.log(e);
             console.log(e.target);
