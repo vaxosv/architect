@@ -12143,7 +12143,7 @@ var Projects = /** @class */ (function () {
         this.getDevice();
         this.loading();
         this.lick();
-        console.log('test verssion: 0.0.3');
+        console.log('test version: 0.0.4');
     }
     Projects.prototype.loading = function () {
         $('#header')
@@ -12279,12 +12279,11 @@ var Projects = /** @class */ (function () {
             console.log('click');
             console.log(e);
             console.log(e.target);
-            alert();
             var elem = $(e.target);
             var a = elem.parents('a')[0];
-            var href = a.getAttribute("hraf");
-            debugger
-            window.location.replace(href)
+            var href = a.getAttribute("href");
+            debugger;
+            window.location.replace(href);
         });
     };
     return Projects;

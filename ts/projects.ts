@@ -6,7 +6,7 @@ export class Projects {
         this.loading()
         this.lick()
 
-        console.log('test verssion: 0.0.3')
+        console.log('test version: 0.0.4')
     }
 
     loading() {
@@ -159,12 +159,12 @@ export class Projects {
             console.log('click')
             console.log(e)
             console.log(e.target)
-            alert()
+
             const elem = $(e.target)
             const  a = elem.parents('a')[0]
-            const href = a.getAttribute("hraf")
-
-            // window.location.replace(href)
+            const href = a.getAttribute("href")
+            debugger
+            window.location.replace(href)
         })
     }
 }
