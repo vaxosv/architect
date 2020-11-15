@@ -2,8 +2,9 @@ export function ellipsizeTextBox(elementLinkName: string, elementLink: any, el: 
     const maxStrLength = length;
     let innerText = ''
     if (elementLink) {
-        innerText = text.length > maxStrLength ? `${text.substring(0, maxStrLength)}... <span class="readMore"><a href="${elementLink}" target="_blank" >${elementLinkName}</a></span>`
-            : `${text} <span class="readMore"><a href="${elementLink}">${elementLinkName}</a></span>`
+        innerText = text.length > maxStrLength ? `${text.substring(0, maxStrLength)}... 
+            <span class="readMore"><a href="${elementLink}" target="_blank" >${elementLinkName}</a></span>`
+            : `${text} <span class="readMore"><a href="${elementLink}" target="_blank" >${elementLinkName}</a></span>`
         el.html(innerText)
     } else {
         innerText = text.length > maxStrLength ?

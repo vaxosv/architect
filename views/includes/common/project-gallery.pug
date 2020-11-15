@@ -1,13 +1,12 @@
 .project-detailed-gallery
     .detailed-gallery
         .controls
-            .control(style="background-image: url('./assets/home.png')")
-            .control(style="background-image: url('./assets/home.png')")
-            .control(style="background-image: url('./assets/home.png')")
-        .container
+            .control(style="background-image: url('./assets/home.png')" data-index="0")
+            .control(style="background-image: url('./assets/home.png')" data-index="1")
+            .control(style="background-image: url('./assets/home.png')" data-index="2")
+        .container.scroll
             .close
-                .line.one
-                .line.two
+                img(src='./assets/close.svg' alt='close')
             .gallery-image-container
                 .image
                     .img(style="background-image: url('./assets/home.png')")

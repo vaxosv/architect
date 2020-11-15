@@ -155,30 +155,6 @@ export class Projects {
     }
 
     private lick() {
-        // $('.projects ul a').children().on('click', (e) => {
-        //     console.log('click')
-        //     console.log(e)
-        //     console.log(e.target)
-        //
-        //     const elem = $(e.target)
-        //     const  a = elem.parents('a')[0]
-        //     const href = a.getAttribute("href")
-        //     debugger
-        //     window.location.replace(href)
-        // })
-
-        $('.project').children().on('click', (e) => {
-            console.log('click')
-            console.log(e)
-            console.log(e.target)
-
-            const elem = $(e.target)
-            const  a = elem.parents('a')[0]
-            const href = a.getAttribute("href")
-            debugger
-            window.location.replace(href)
-        })
-
         $('.project').on('click', (e) => {
             console.log('click')
             console.log(e)
@@ -186,9 +162,7 @@ export class Projects {
 
             const elem = $(e.target)
             const  a = elem.parents('a')[0]
-            const href = a.getAttribute("href")
-            debugger
-            window.location.replace(href)
+            window.location.href = a.getAttribute("href")
         })
     }
 }

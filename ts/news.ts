@@ -3,9 +3,9 @@ import * as $ from "jquery";
 
 export class News {
     constructor() {
-        this.threeDots();
         this.eventListeners()
         this.loading()
+        this.threeDots();
     }
 
     loading() {

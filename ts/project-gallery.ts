@@ -16,6 +16,27 @@ export class ProjectGallery {
         this.init()
         this.subscribeToOpen()
         this.close()
+
+        var supportsOrientationChange = "onorientationchange" in window,
+            orientationEvent = supportsOrientationChange ? "orientationchange" : "resize";
+
+        window.addEventListener(orientationEvent, () =>{
+            this.init()
+        }, false);
+
+        $(document).on(
+        'keydown', function(event) {
+            if (event.key == "Escape") {
+                $('.project-detailed-gallery').hide('slow')
+                $('body').css('position', 'initial')
+            }
+        });
+
+        $('.detailed-gallery .controls .control').on('click', (e) => {
+            const clicked = $(e.target)
+            const index = clicked.data('index')
+            this.setActiveTab(index)
+        })
     }
 
     init() {
@@ -62,7 +83,7 @@ export class ProjectGallery {
         let lastClick = Date.now() - rate;
         let up = false;
         let down = false;
-        $('.detailed-gallery').on('mousewheel', (e) => {
+        $('.detailed-gallery .scroll').on('mousewheel', (e) => {
             if (Date.now() - lastClick >= rate) {
                 // @ts-ignore
                 if (e.originalEvent.deltaY > 0) {
@@ -159,17 +180,17 @@ export class ProjectGallery {
 
     close() {
         $('.close').on('click', () => {
-            console.log(12)
             $('.project-detailed-gallery').hide('slow')
             $('body').css('position', 'initial')
         })
     }
 
     subscribeToOpen() {
-        $('.image').on('click', () => {
-            $('.project-detailed-gallery').show( "slow", function() {
-                // Animation complete.
-            });
+        $('.image').on('click', (e) => {
+            const clicked = $(e.target)
+            const index = clicked.data('index')
+            this.setActiveTab(index)
+            $('.project-detailed-gallery').show( "slow", function() {});
         })
     }
 }
