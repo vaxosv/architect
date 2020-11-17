@@ -12003,8 +12003,8 @@ function ellipsizeTextBox(elementLinkName, elementLink, el, text, elementRead, l
     var maxStrLength = length;
     var innerText = '';
     if (elementLink) {
-        innerText = text.length > maxStrLength ? text.substring(0, maxStrLength) + "... <span class=\"readMore\"><a href=\"" + elementLink + "\" target=\"_blank\" >" + elementLinkName + "</a></span>"
-            : text + " <span class=\"readMore\"><a href=\"" + elementLink + "\">" + elementLinkName + "</a></span>";
+        innerText = text.length > maxStrLength ? text.substring(0, maxStrLength) + "... \n            <span class=\"readMore\"><a href=\"" + elementLink + "\" target=\"_blank\" >" + elementLinkName + "</a></span>"
+            : text + " <span class=\"readMore\"><a href=\"" + elementLink + "\" target=\"_blank\" >" + elementLinkName + "</a></span>";
         el.html(innerText);
     }
     else {
@@ -12087,9 +12087,9 @@ var about = /** @class */ (function () {
 
 var News = /** @class */ (function () {
     function News() {
-        this.threeDots();
         this.eventListeners();
         this.loading();
+        this.threeDots();
     }
     News.prototype.loading = function () {
         jquery__WEBPACK_IMPORTED_MODULE_1__('#header')
@@ -12275,36 +12275,13 @@ var Projects = /** @class */ (function () {
         });
     };
     Projects.prototype.lick = function () {
-        // $('.projects ul a').children().on('click', (e) => {
-        //     console.log('click')
-        //     console.log(e)
-        //     console.log(e.target)
-        //
-        //     const elem = $(e.target)
-        //     const  a = elem.parents('a')[0]
-        //     const href = a.getAttribute("href")
-        //     debugger
-        //     window.location.replace(href)
-        // })
-        $('.project').children().on('click', function (e) {
-            console.log('click');
-            console.log(e);
-            console.log(e.target);
-            var elem = $(e.target);
-            var a = elem.parents('a')[0];
-            var href = a.getAttribute("href");
-            debugger;
-            window.location.replace(href);
-        });
         $('.project').on('click', function (e) {
             console.log('click');
             console.log(e);
             console.log(e.target);
             var elem = $(e.target);
             var a = elem.parents('a')[0];
-            var href = a.getAttribute("href");
-            debugger;
-            window.location.replace(href);
+            window.location.href = a.getAttribute("href");
         });
     };
     return Projects;
@@ -12371,9 +12348,25 @@ var Direction;
 })(Direction || (Direction = {}));
 var ProjectGallery = /** @class */ (function () {
     function ProjectGallery() {
+        var _this = this;
         this.init();
         this.subscribeToOpen();
         this.close();
+        var supportsOrientationChange = "onorientationchange" in window, orientationEvent = supportsOrientationChange ? "orientationchange" : "resize";
+        window.addEventListener(orientationEvent, function () {
+            _this.init();
+        }, false);
+        $(document).on('keydown', function (event) {
+            if (event.key == "Escape") {
+                $('.project-detailed-gallery').hide('slow');
+                $('body').css('position', 'initial');
+            }
+        });
+        $('.detailed-gallery .controls .control').on('click', function (e) {
+            var clicked = $(e.target);
+            var index = clicked.data('index');
+            _this.setActiveTab(index);
+        });
     }
     ProjectGallery.prototype.init = function () {
         if (window.innerWidth >= 768) {
@@ -12417,7 +12410,7 @@ var ProjectGallery = /** @class */ (function () {
         var lastClick = Date.now() - rate;
         var up = false;
         var down = false;
-        $('.detailed-gallery').on('mousewheel', function (e) {
+        $('.detailed-gallery .scroll').on('mousewheel', function (e) {
             if (Date.now() - lastClick >= rate) {
                 // @ts-ignore
                 if (e.originalEvent.deltaY > 0) {
@@ -12493,16 +12486,17 @@ var ProjectGallery = /** @class */ (function () {
     };
     ProjectGallery.prototype.close = function () {
         $('.close').on('click', function () {
-            console.log(12);
             $('.project-detailed-gallery').hide('slow');
             $('body').css('position', 'initial');
         });
     };
     ProjectGallery.prototype.subscribeToOpen = function () {
-        $('.image').on('click', function () {
-            $('.project-detailed-gallery').show("slow", function () {
-                // Animation complete.
-            });
+        var _this = this;
+        $('.image').on('click', function (e) {
+            var clicked = $(e.target);
+            var index = clicked.data('index');
+            _this.setActiveTab(index);
+            $('.project-detailed-gallery').show("slow", function () { });
         });
     };
     return ProjectGallery;
