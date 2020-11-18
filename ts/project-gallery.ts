@@ -36,6 +36,7 @@ export class ProjectGallery {
             const clicked = $(e.target)
             const index = clicked.data('index')
             this.setActiveTab(index)
+            this.slider.goTo(index)
         })
     }
 
@@ -54,7 +55,6 @@ export class ProjectGallery {
                 mouseDrag: true,
                 mode: 'gallery',
             })
-            this.showSlider()
         } else {
             this.slider = tns({
                 container: '.gallery-image-container',
@@ -191,6 +191,8 @@ export class ProjectGallery {
             const index = clicked.data('index')
             this.setActiveTab(index)
             $('.project-detailed-gallery').show( "slow", function() {});
+
+            this.showSlider()
         })
     }
 }
