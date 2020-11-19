@@ -12366,6 +12366,7 @@ var ProjectGallery = /** @class */ (function () {
             var clicked = $(e.target);
             var index = clicked.data('index');
             _this.setActiveTab(index);
+            _this.slider.goTo(index);
         });
     }
     ProjectGallery.prototype.init = function () {
@@ -12383,7 +12384,6 @@ var ProjectGallery = /** @class */ (function () {
                 mouseDrag: true,
                 mode: 'gallery',
             });
-            this.showSlider();
         }
         else {
             this.slider = Object(_assets_js_tini__WEBPACK_IMPORTED_MODULE_0__[/* tns */ "a"])({
@@ -12497,6 +12497,7 @@ var ProjectGallery = /** @class */ (function () {
             var index = clicked.data('index');
             _this.setActiveTab(index);
             $('.project-detailed-gallery').show("slow", function () { });
+            _this.showSlider();
         });
     };
     return ProjectGallery;
