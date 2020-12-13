@@ -11,6 +11,7 @@ enum Direction {
 
 export class ProjectGallery {
     slider: any
+    slider2: any;
 
     constructor() {
         this.init()
@@ -37,11 +38,11 @@ export class ProjectGallery {
             const index = clicked.data('index')
             this.setActiveTab(index)
             this.slider.goTo(index)
+            this.slider2.goTo(index)
         })
     }
 
     init() {
-        if (window.innerWidth >= 768) {
             this.slider = tns({
                 container: '.gallery-image-container',
                 items: 1,
@@ -55,9 +56,8 @@ export class ProjectGallery {
                 mouseDrag: true,
                 mode: 'gallery',
             })
-        } else {
-            this.slider = tns({
-                container: '.gallery-image-container',
+            this.slider2 = tns({
+                container: '.gallery-image-container-mobile',
                 items: 1,
                 slideBy: 'page',
                 // autoplay: true,
@@ -70,8 +70,6 @@ export class ProjectGallery {
                 mode: 'carousel',
             })
             this.hummer()
-        }
-
 
         $('.tns-outer').css('margin', 0)
         this.setActiveTab(0)
@@ -97,15 +95,19 @@ export class ProjectGallery {
 
                 if (up) {
                     this.slider.goTo('prev')
+                    this.slider2.goTo('prev')
                 }
 
                 if (down) {
                     this.slider.goTo('next')
+                    this.slider2.goTo('next')
                 }
 
                 const info = this.slider.getInfo()
+                const info2 = this.slider2.getInfo()
                 const currentIndex = info.navCurrentIndex
-                this.setActiveTab(currentIndex)
+                const currentIndex2 = info2.navCurrentIndex
+                this.setActiveTab(currentIndex || currentIndex2)
 
                 lastClick = Date.now()
             }
@@ -133,15 +135,19 @@ export class ProjectGallery {
 
             if (Direction.Right === swipeDirection) {
                 this.slider.goTo('next')
+                this.slider2.goTo('next')
             }
             if (Direction.Down === swipeDirection) {
                 this.slider.goTo('next')
+                this.slider2.goTo('next')
             }
             if (Direction.Left === swipeDirection) {
                 this.slider.goTo('prev')
+                this.slider2.goTo('prev')
             }
             if (Direction.Up === swipeDirection) {
                 this.slider.goTo('prev')
+                this.slider2.goTo('prev')
             }
 
             this.footer()
@@ -153,12 +159,14 @@ export class ProjectGallery {
 
         goBack.on('click', () => {
             this.slider.goTo('prev')
+            this.slider2.goTo('prev')
             this.footer()
 
         })
 
         goNext.on('click', () => {
             this.slider.goTo('next')
+            this.slider2.goTo('next')
             this.footer()
 
         })
@@ -168,14 +176,19 @@ export class ProjectGallery {
 
     footer() {
         const info = this.slider.getInfo();
+        const info2 = this.slider2.getInfo();
         const activeIndex = info.navCurrentIndex + 1;
+        const activeIndex2 = info2.navCurrentIndex + 1;
         const totalCount = info.slideCount
+        const totalCount2 = info2.slideCount
 
         const back = $('.slider-counter > .active-index');
         const next = $('.slider-counter > .total-count');
 
         back.text(activeIndex.toString())
         next.text(totalCount.toString())
+        back.text(activeIndex2.toString())
+        next.text(totalCount2.toString())
     }
 
     close() {
