@@ -78,7 +78,7 @@ export class Projects {
 
     filterHandler() {
         $('body').on('click', (e) => {
-            e.preventDefault()
+            // e.preventDefault()
             const element = $(e.target)
 
             const hasClass = element.hasClass('filter-head') ||
@@ -155,13 +155,13 @@ export class Projects {
     }
 
     private lick() {
-        $('.project').on('click', (e) => {
-            const elem = $(e.target)
-            const  a = elem.parents('a')[0]
-            // window.location.href = a.getAttribute("href")
-            window.location.assign(a.getAttribute("href"))
-            // $(location).attr('href', a.getAttribute("href"));
-
-        })
+        // $('.project').on('click', (e) => {
+        //     const elem = $(e.target)
+        //     const  a = elem.parents('a')[0]
+        //     // window.location.href = a.getAttribute("href")
+        //     window.location.assign(a.getAttribute("href"))
+        //     // $(location).attr('href', a.getAttribute("href"));
+        //
+        // })
     }
 }

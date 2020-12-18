@@ -12218,7 +12218,7 @@ var Projects = /** @class */ (function () {
     Projects.prototype.filterHandler = function () {
         var _this = this;
         $('body').on('click', function (e) {
-            e.preventDefault();
+            // e.preventDefault()
             var element = $(e.target);
             var hasClass = element.hasClass('filter-head') ||
                 element.hasClass('some-container') ||
@@ -12280,13 +12280,14 @@ var Projects = /** @class */ (function () {
         });
     };
     Projects.prototype.lick = function () {
-        $('.project').on('click', function (e) {
-            var elem = $(e.target);
-            var a = elem.parents('a')[0];
-            // window.location.href = a.getAttribute("href")
-            window.location.assign(a.getAttribute("href"));
-            // $(location).attr('href', a.getAttribute("href"));
-        });
+        // $('.project').on('click', (e) => {
+        //     const elem = $(e.target)
+        //     const  a = elem.parents('a')[0]
+        //     // window.location.href = a.getAttribute("href")
+        //     window.location.assign(a.getAttribute("href"))
+        //     // $(location).attr('href', a.getAttribute("href"));
+        //
+        // })
     };
     return Projects;
 }());
