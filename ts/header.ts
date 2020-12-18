@@ -98,13 +98,20 @@ export class Header {
         $('header ul a').on('click', (e) => {
             // @ts-ignore
             let elem = e.target.parentElement.href
-            this.redirect(elem)
+            // this.redirect(elem)
+            // window.location.href = elem
+            window.location.assign(elem)
+            // $(location).attr('href', elem);
+
         })
 
         $('.lang').on('click', (e) => {
             // @ts-ignore
             let link = e.target.childNodes[1].href
-            this.redirect(link)
+            window.location.assign(link)
+            // this.redirect(link)
+            // window.location.href = link
+            // $(location).attr('href', link);
         })
     }
 

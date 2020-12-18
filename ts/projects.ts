@@ -156,13 +156,12 @@ export class Projects {
 
     private lick() {
         $('.project').on('click', (e) => {
-            console.log('click')
-            console.log(e)
-            console.log(e.target)
-
             const elem = $(e.target)
             const  a = elem.parents('a')[0]
-            window.location.href = a.getAttribute("href")
+            // window.location.href = a.getAttribute("href")
+            window.location.assign(a.getAttribute("href"))
+            // $(location).attr('href', a.getAttribute("href"));
+
         })
     }
 }

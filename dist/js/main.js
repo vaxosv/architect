@@ -10804,16 +10804,21 @@ var Header = /** @class */ (function () {
         $('.filter').hide();
     };
     Header.prototype.click = function () {
-        var _this = this;
         $('header ul a').on('click', function (e) {
             // @ts-ignore
             var elem = e.target.parentElement.href;
-            _this.redirect(elem);
+            // this.redirect(elem)
+            // window.location.href = elem
+            window.location.assign(elem);
+            // $(location).attr('href', elem);
         });
         $('.lang').on('click', function (e) {
             // @ts-ignore
             var link = e.target.childNodes[1].href;
-            _this.redirect(link);
+            window.location.assign(link);
+            // this.redirect(link)
+            // window.location.href = link
+            // $(location).attr('href', link);
         });
     };
     Header.prototype.redirect = function (input) {
@@ -12276,12 +12281,11 @@ var Projects = /** @class */ (function () {
     };
     Projects.prototype.lick = function () {
         $('.project').on('click', function (e) {
-            console.log('click');
-            console.log(e);
-            console.log(e.target);
             var elem = $(e.target);
             var a = elem.parents('a')[0];
-            window.location.href = a.getAttribute("href");
+            // window.location.href = a.getAttribute("href")
+            window.location.assign(a.getAttribute("href"));
+            // $(location).attr('href', a.getAttribute("href"));
         });
     };
     return Projects;
