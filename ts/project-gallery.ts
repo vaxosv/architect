@@ -13,6 +13,8 @@ export class ProjectGallery {
     slider: any
     slider2: any;
 
+    hummerJs: any
+
     constructor() {
         this.init()
         this.subscribeToOpen()
@@ -125,12 +127,21 @@ export class ProjectGallery {
     }
 
     hummer() {
-        const hummer = new Hammer($('.detailed-gallery').get(0), {
+        if (this.hummerJs) {
+            this.hummerJs.off('swipe')
+        }
+        const elem = $('.detailed-gallery').get(0)
+
+        const options: any =  {
             recognizers: [
                 [Hammer.Swipe, {direction: Hammer.DIRECTION_ALL}],
             ]
-        })
-        hummer.on("swipe", (ev) => {
+        }
+
+        this.hummerJs = new Hammer(elem, options)
+
+
+        this.hummerJs.on("swipe", (ev:any) => {
             const swipeDirection = ev.direction
 
             if (Direction.Right === swipeDirection) {
