@@ -12448,12 +12448,17 @@ var ProjectGallery = /** @class */ (function () {
     };
     ProjectGallery.prototype.hummer = function () {
         var _this = this;
-        var hummer = new Hammer($('.detailed-gallery').get(0), {
+        if (this.hummerJs) {
+            this.hummerJs.off('swipe');
+        }
+        var elem = $('.detailed-gallery').get(0);
+        var options = {
             recognizers: [
                 [Hammer.Swipe, { direction: Hammer.DIRECTION_ALL }],
             ]
-        });
-        hummer.on("swipe", function (ev) {
+        };
+        this.hummerJs = new Hammer(elem, options);
+        this.hummerJs.on("swipe", function (ev) {
             var swipeDirection = ev.direction;
             if (Direction.Right === swipeDirection) {
                 _this.slider.goTo('next');
