@@ -12442,9 +12442,11 @@ var ProjectGallery = /** @class */ (function () {
         });
     };
     ProjectGallery.prototype.setActiveTab = function (index) {
-        var controls = $('.control');
-        controls.removeClass('active-control');
-        controls.eq(index).addClass('active-control');
+        // const controls = $('.control')
+        // controls.removeClass('active-control')
+        // controls.eq(index).addClass('active-control')
+        this.slider.goTo(index);
+        this.slider2.goTo(index);
     };
     ProjectGallery.prototype.hummer = function () {
         var _this = this;
