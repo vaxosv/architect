@@ -12442,9 +12442,9 @@ var ProjectGallery = /** @class */ (function () {
         });
     };
     ProjectGallery.prototype.setActiveTab = function (index) {
-        // const controls = $('.control')
-        // controls.removeClass('active-control')
-        // controls.eq(index).addClass('active-control')
+        var controls = $('.control');
+        controls.removeClass('active-control');
+        controls.eq(index).addClass('active-control');
         this.slider.goTo(index);
         this.slider2.goTo(index);
     };

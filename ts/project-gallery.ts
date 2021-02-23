@@ -119,9 +119,9 @@ export class ProjectGallery {
     }
 
     setActiveTab(index: number) {
-        // const controls = $('.control')
-        // controls.removeClass('active-control')
-        // controls.eq(index).addClass('active-control')
+        const controls = $('.control')
+        controls.removeClass('active-control')
+        controls.eq(index).addClass('active-control')
         this.slider.goTo(index)
         this.slider2.goTo(index)
     }
