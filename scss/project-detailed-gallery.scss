@@ -225,14 +225,13 @@
       }
     }
   }
-}
-
-
-@media screen and (max-width: 768px) {
- .tns-outer[id="tns1-ow"] {
-    display: none;
-  }
-  .tns-outer[id="tns2-ow"] {
-    display: block;
+  @media screen and (max-width: 768px) {
+   .tns-outer[id="tns1-ow"] {
+      display: none;
+    }
+    .tns-outer[id="tns2-ow"] {
+      display: block;
+    }
   }
 }
+
